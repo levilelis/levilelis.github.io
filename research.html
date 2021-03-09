@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Levi Lelis - UAlberta</title>
+<!--
+Next Level CSS Template
+https://templatemo.com/tm-532-next-level
+-->
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/templatemo-style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="col-11 tm-page-cols-container">
+          <div class="tm-page-col-left">
+            <div class="col-lg-10 col-10">
+            </div>
+          </div>
+        
+        <div class="tm-page-col-right">
+          <div class="col-lg-12 col-2 tm-nav-col">
+          <div class="col-lg-3 col-20">
+          <img src="img/UA-COLOUR.png" class="img-fluid"/>
+        </div>
+          <div class="tm-nav">
+            <nav class="navbar navbar-expand-lg navbar-light tm-navbar">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto mr-0">
+                  <li class="nav-item active">
+                    <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  </li>
+                  <li class="nav-item active">
+                    <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="publications.html">Publications</a>
+                  </li>
+                  <li class="nav-item active">
+                    <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="research.html">Research</a>
+                  </li>
+                  <li class="nav-item active">
+                    <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="people.html"
+                    >People<span class="sr-only">(current)</span></a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="row tm-welcome-row">
+        <div class="col-12 tm-page-cols-container">
+          <div class="tm-page-col-left">
+            <div class="col-lg-10 col-10">
+            </div>
+          </div>
+
+          <div class="tm-page-col-right">
+            <div class="col-lg-10 col-10">
+              <h2 class="tm-text-secondary tm-mb-0">
+                Past and Current Research
+              </h2>
+              <p class="mb-2">
+                In this page I briefly describe a few highlight projects I developed with students and collaborators. See my <a href="publications.html">publications page</a> for more information on these and other projects. 
+              </p>
+              <br>
+              <h4 class="tm-text-secondary tm-mb-0">
+                Synthesis of Programmatic Strategies
+              </h4>
+              <p class="mb-2">
+                Recently, we developed a local search algorithm to synthesize programmatic strategies for playing RTS games (see <a href="papers/2021/marinoMOTL21.pdf">paper</a>). We showed empirically that the programs synthesized by our system are competitive in terms of winning rate with programs written by professional programmers. A qualitative analysis showed that both system and programmers derived similar strategies for playing the game, but the synthesizer was able to write low-level optimizations that are hard for humans to derive. 
+              </p>
+              <div class="col-lg-7 col-10">
+                <img
+                      src="img/ls2.png"
+                      class="img-fluid"
+                />
+              </div>
+              <p class="mb-2">
+                Our qualitative analysis also showed that all programs synthesized our system could be easily interpreted (the example above is a strategy for playing <a href="https://github.com/santiontanon/microrts">MicroRTS</a>). The main drawback of our approach to synthesizing programmatic strategies is that the local search algorithm needs to play a very large number of games to be able to synthesize strong strategies. We are currently investigating more effective search algorithms for synthesizing programmatic strategies. 
+              </p>
+<!--               <p class="mb-2">
+                In contrast with traditional program synthesis, one doesn't necessarily have a logical formula or a set of training data specifying what needs to be satisfied in the synthesis of programmatic strategies. The synthesizer receives a problem as input (e.g., the model of a game) and needs to generate a computer program that solves the problem. 
+              </p> -->
+              
+              <br>
+              <h4 class="tm-text-secondary tm-mb-0">
+                Real-Time Planning in Adversarial Scenarios
+              </h4>
+
+              <p class="mb-2">
+                We developed a population-based search algorithm for synthesizing a set of programmatic strategies to induce action abstractions for aiding a real-time planner (see <a href="papers/2019/marinoMTL19.pdf">paper</a>). Our system synthesizes a set of complementary programmatic strategies, which are used to induce action abstractions by allowing a planner to consider during search only the actions returned by one of the strategies. 
+              </p>
+              <center>
+              <div class="col-lg-7 col-10">
+                <img
+                      src="img/micro-rts.png"
+                      class="img-fluid"
+                />
+              </div>
+              </center>
+              <p class="mb-2">
+                A system that combines action abstractions induced by programmatic strategies with a <a href="papers/2018/moraesMLN18.pdf">search algorithm that "pays attention"</a> to different aspects of the game won the 2018 <a href="https://sites.google.com/site/micrortsaicompetition/home">IEEE MicroRTS competition</a>.
+              </p>
+
+              <br>
+              <h4 class="tm-text-secondary tm-mb-0">
+                Single-Agent Search
+              </h4>
+              <p class="mb-2">
+                We introduced <a href="papers/2018/orseauLLW18.pdf">Levin Tree Search (LTS)</a>, a combinatorial search algorithm that uses a policy to guide its search and has guarantees on the number of nodes one needs to expand to solve a problem that depends on the quality of the policy used in search. We also developed <a href="papers/2021/orseauL21.pdf">Policy-Guided Heuristic Search (PHS)</a>, a search algorithm that uses both a policy and a heuristic function to guide the search. PHS also comes with guarantees on the number of nodes expanded to solve a problem that depends on the quality of both the policy and the heuristic used in search. Our experiments showed that PHS outperforms policy-guided and heuristic-guided algorithms as it performs well in domains where the heuristic-based A* outperforms LTS and in domains where LTS outperforms A*.
+              </p> 
+
+              <p class="mb-2">
+                We have also introduced <a href="papers/2019/helmertLLOS19.pdf">Iterative Budgeted Exponential Search (IBEX)</a> a framework that solved two long-standing problems in heuristic search. That is, A* can expand exponentially more nodes than uninformed search algorithms and IDA* might re-expand a quadratic number of nodes. Both A* and IDA* have almost linear expansion guarantees if using IBEX.
+              </p>
+
+              <br>
+              <h4 class="tm-text-secondary tm-mb-0">
+                Classical Planning
+              </h4>
+              <p class="mb-2">
+                We developed Complementary, a classical planner (see these <a href="papers/2016/lelisFABZH16.pdf">two</a> <a href="papers/2017/francoTLB17.pdf">papers</a>) that was the runner-up at the <a href="https://ipc2018-classical.bitbucket.io/\#results">2018 International Planning Competition (IPC)</a>. The core idea of Complementary is to use an algorithm to <a href="papers/2013/ARTINT2694.pdf">estimate the number of nodes A* will expand</a> with a given heuristic function for solving a combinatorial search problem. Such estimates are used as an evaluation function for building pattern database heuristics. In the 2018 IPC, Complementary lost only to a portfolio of planners, which is expected to perform better than non-portfolio planners such as Complementary. 
+              </p>
+
+              <br>
+              <h4 class="tm-text-secondary tm-mb-0">
+                Prediction Algorithms in Heuristic Search
+              </h4>
+              <p class="mb-2">
+                In my early research days I worked on algorithms for estimating the running time of tree search algorithms. This is a research question that was initially posed by Don Knuth in the 70s. Knuth in 1975 and later his PhD student Chen showed different methods for estimating the running time of backtracking algorithms (i.e., depth-first search with a limited depth). Many others extended on the algorithms invented by Knuth and Chen. 
+              </p>
+              <p class="mb-2">
+                In my PhD I developed algorithms for estimating the running time of the heuristic search algorithms <a href="papers/2013/ARTINT2694.pdf">IDA*</a>, <a href="papers/2014/lelisSS14.pdf">A*</a> and <a href="papers/2014/lelisOD14.pdf">Branch and Bound</a> algorithms. The algorithms for predicting the running time of Branch and Bound procedures represent a solution to a problem posed by D. Knuth in 1975. Our prediction algorithms are being used in <a href="papers/2017/francoTLB17.pdf">planners</a> and in parallel systems as a means of dividing the <a href="papers/2015/paudelLA15.pdf">computational workload amongst multiple CPUs</a>.
+              </p>
+              <center>
+              <div class="col-lg-7 col-10">
+                <img
+                      src="img/biss.png"
+                      class="img-fluid"
+                />
+              </div>
+              </center>
+              <p class="mb-2">
+                The ideas used to estimate the running time of heuristic search algorithms can also be used to estimate the optimial solution cost of combinatorial search problems. <a href="papers/2016/lelisSJAZFH16.pdf">BiSS</a> is a bidirectional sampling algorithm that produces accurate estimates of the solution cost for several classic heuristic search domains such as the sliding-tile puzzle and Rubik's cube. One interesting application of BiSS is to generate training data to induce a neural network that can be used as a heuristic function to guide heuristic search algorithms. BiSS reduced from days to hours the time required by previous state­-of-­the-­art algorithms to learn heuristic functions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
