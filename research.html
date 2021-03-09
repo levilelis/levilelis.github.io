@@ -80,7 +80,7 @@ https://templatemo.com/tm-532-next-level
                 Past and Current Research
               </h2>
               <p class="mb-2">
-                In this page I briefly describe a few highlight projects I developed with students and collaborators. See my <a href="publications.html">publications page</a> for more information on these and other projects. 
+                In this page I briefly describe a few projects I developed with students and collaborators. See my <a href="publications.html">publications page</a> for more information on these and other projects. 
               </p>
               <br>
               <h4 class="tm-text-secondary tm-mb-0">
@@ -96,7 +96,7 @@ https://templatemo.com/tm-532-next-level
                 />
               </div>
               <p class="mb-2">
-                Our qualitative analysis also showed that all programs synthesized our system could be easily interpreted (the example above is a strategy for playing <a href="https://github.com/santiontanon/microrts">MicroRTS</a>). The main drawback of our approach to synthesizing programmatic strategies is that the local search algorithm needs to play a very large number of games to be able to synthesize strong strategies. We are currently investigating more effective search algorithms for synthesizing programmatic strategies. 
+                Our qualitative analysis also showed that all programs synthesized by our system could be easily interpreted (the example above is a strategy for playing <a href="https://github.com/santiontanon/microrts">MicroRTS</a>). The main drawback of our approach to synthesizing programmatic strategies is that the local search algorithm needs to play a very large number of games to be able to synthesize strong strategies. We are currently investigating more effective search algorithms for synthesizing programmatic strategies. 
               </p>
 <!--               <p class="mb-2">
                 In contrast with traditional program synthesis, one doesn't necessarily have a logical formula or a set of training data specifying what needs to be satisfied in the synthesis of programmatic strategies. The synthesizer receives a problem as input (e.g., the model of a game) and needs to generate a computer program that solves the problem. 
@@ -139,7 +139,7 @@ https://templatemo.com/tm-532-next-level
                 Classical Planning
               </h4>
               <p class="mb-2">
-                We developed Complementary, a classical planner (see these <a href="papers/2016/lelisFABZH16.pdf">two</a> <a href="papers/2017/francoTLB17.pdf">papers</a>) that was the runner-up at the <a href="https://ipc2018-classical.bitbucket.io/\#results">2018 International Planning Competition (IPC)</a>. The core idea of Complementary is to use an algorithm to <a href="papers/2013/ARTINT2694.pdf">estimate the number of nodes A* will expand</a> with a given heuristic function for solving a combinatorial search problem. Such estimates are used as an evaluation function for building pattern database heuristics. In the 2018 IPC, Complementary lost only to a portfolio of planners, which is expected to perform better than non-portfolio planners such as Complementary. 
+                We developed Complementary, a classical planner (see these <a href="papers/2016/lelisFABZH16.pdf">two</a> <a href="papers/2017/francoTLB17.pdf">papers</a>) that was the runner-up at the <a href="https://ipc2018-classical.bitbucket.io/\#results">2018 International Planning Competition (IPC)</a>. The core idea behind Complementary is to use an algorithm to <a href="papers/2013/ARTINT2694.pdf">estimate the number of nodes A* will expand</a> with a given heuristic function for solving a combinatorial search problem. Such estimates are used as an evaluation function for building pattern database heuristics. In the 2018 IPC, Complementary lost only to a portfolio of planners, which is expected to perform better than non-portfolio planners such as Complementary. 
               </p>
 
               <br>
@@ -147,10 +147,7 @@ https://templatemo.com/tm-532-next-level
                 Prediction Algorithms in Heuristic Search
               </h4>
               <p class="mb-2">
-                In my early research days I worked on algorithms for estimating the running time of tree search algorithms. This is a research question that was initially posed by Don Knuth in the 70s. Knuth in 1975 and later his PhD student Chen showed different methods for estimating the running time of backtracking algorithms (i.e., depth-first search with a limited depth). Many others extended on the algorithms invented by Knuth and Chen. 
-              </p>
-              <p class="mb-2">
-                In my PhD I developed algorithms for estimating the running time of the heuristic search algorithms <a href="papers/2013/ARTINT2694.pdf">IDA*</a>, <a href="papers/2014/lelisSS14.pdf">A*</a> and <a href="papers/2014/lelisOD14.pdf">Branch and Bound</a> algorithms. The algorithms for predicting the running time of Branch and Bound procedures represent a solution to a problem posed by D. Knuth in 1975. Our prediction algorithms are being used in <a href="papers/2017/francoTLB17.pdf">planners</a> and in parallel systems as a means of dividing the <a href="papers/2015/paudelLA15.pdf">computational workload amongst multiple CPUs</a>.
+                In my early research days I worked on algorithms for estimating the running time of tree search algorithms. Knuth, in 1975, and his PhD student, Chen, in 1992, presented different methods for estimating the running time of backtracking algorithms. In my PhD I developed algorithms for estimating the running time of the heuristic search algorithms <a href="papers/2013/ARTINT2694.pdf">IDA*</a>, <a href="papers/2014/lelisSS14.pdf">A*</a> and <a href="papers/2014/lelisOD14.pdf">Branch and Bound</a> algorithms. The algorithms for predicting the running time of Branch and Bound procedures represent the solution to a problem posed by D. Knuth in his seminal 1975 paper. Our prediction algorithms are being used in <a href="papers/2017/francoTLB17.pdf">planners</a> and in parallel systems as a means of dividing the <a href="papers/2015/paudelLA15.pdf">computational workload amongst multiple CPUs</a>.
               </p>
               <center>
               <div class="col-lg-7 col-10">
@@ -161,7 +158,7 @@ https://templatemo.com/tm-532-next-level
               </div>
               </center>
               <p class="mb-2">
-                The ideas used to estimate the running time of heuristic search algorithms can also be used to estimate the optimial solution cost of combinatorial search problems. <a href="papers/2016/lelisSJAZFH16.pdf">BiSS</a> is a bidirectional sampling algorithm that produces accurate estimates of the solution cost for several classic heuristic search domains such as the sliding-tile puzzle and Rubik's cube. One interesting application of BiSS is to generate training data to induce a neural network that can be used as a heuristic function to guide heuristic search algorithms. BiSS reduced from days to hours the time required by previous state­-of-­the-­art algorithms to learn heuristic functions.
+                The ideas used to estimate the running time of heuristic search algorithms can also be used to estimate the optimal solution cost of combinatorial search problems. <a href="papers/2016/lelisSJAZFH16.pdf">BiSS</a> is a bidirectional sampling algorithm that produces accurate estimates of the solution cost for several classic heuristic search domains such as the sliding-tile puzzle and Rubik's cube. One interesting application of BiSS is to generate training data to induce a neural network that can be used as a heuristic function to guide heuristic search algorithms. BiSS reduced the time required by previous state­-of-­the-­art algorithms to learn heuristic functions from days to hours.
               </p>
             </div>
           </div>
