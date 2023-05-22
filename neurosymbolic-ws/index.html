@@ -1,0 +1,215 @@
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+  margin-left: 30px;
+}
+
+h3 {
+  margin: 20 30px 20 30px ;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 150px;
+  margin-left: 30px;
+}
+</style>
+</head>
+<body>
+
+<h2><center>Upper Bound Workshop on<br> Neurosymbolic Programming <br>
+  May 25, 2023 - University of Alberta - <a href='https://goo.gl/maps/rsA3g9CdBJfALNCLA'>ECHA</a> 1-451<br>
+<!--  <a href="https://meet.google.com/jrf-vinz-qyb">Google Meet Room https://meet.google.com/jrf-vinz-qyb</a> <br> -->
+</center>
+</h2>
+
+<h3>Introduction</h3>
+
+<p>
+Symbolic machine learning algorithms, such as those that derive programs with inductive logic programming, have the advantage of being able to learn from a small number of samples, and their synthesized solutions can often generalize to unseen problems. Additionally, these solutions are represented as readable programs, making them understandable by domain experts. On the down side, one needs to search over vast spaces of programs to synthesize such symbolic solutions, which can severely limit the use of these algorithms. Neurosymbolic programming uses neural networks and gradient descent to aid with the process of synthesizing symbolic solutions. For example, neural networks can guide the search in symbolic spaces, reduce the size of the synthesized solutions by replacing symbolic subprograms, and learn symbolic representations that are more amenable to search. Neurosymbolic programming algorithms have been applied to several problems, including reinforcement learning, supervised learning, and algorithm discovery. In this workshop, we will gather researchers from different areas to discuss recent advances in neurosymbolic programming and the future of this emerging and exciting field. 
+</p>
+
+<h3>Workshop Format</h3>
+
+<p>
+This one-day workshop will consist of invited talks, show-and-tell presentations by students from the University of Alberta, a panel discussing the role of neurosymbolic programming in the future of Artificial Intelligence. The panel discussing will set the tone for small working groups, where we will discuss future research directions. We will wrap up the workshop with a short presentation from each group. 
+
+<h3>Invited Guests (Alphabetical Order)</h3>
+
+<p>
+<ul>
+<li> <a href="https://www.hendrikbaier.com/">Hendrik Baier</a>
+<li> <a href="https://apps.ualberta.ca/directory/person/bulitko">Vadim Bulitko</a>
+<li> <a href="https://www.microsoft.com/en-us/research/people/sumitg/">Sumit Gulwani</a>
+<li> <a href="https://averma8053.github.io/">Abhinav Verma</a>
+</ul>
+
+<h3>Tentative Schedule (Mountain Standard Time)</h3>
+
+<table>
+  <tr>
+    <td>9.00 - 9.10 am</td>
+    <td>Opening Remarks (Levi Lelis)</td>
+  </tr>
+  <tr>
+    <td>9.10 - 9.40 am</td>
+    <td>Explainable Search (Hendrik Baier)</td>
+  </tr>
+  <tr>
+    <td>9.40 - 10.10 am</td>
+    <td>Coffee Break</td>
+  </tr>
+  <tr>
+    <td>10.10 - 10.30 am</td>
+    <td>Program Synthesis and Deep Learning for Heuristic Search,
+Constraint Satisfaction and Bioacoustics (Vadim Bulitko)</td>
+  </tr>
+  <tr>
+    <td>10.30 - noon</td>
+    <td>Shown-and-Tell Presentations (UAlberta Students)</td>
+  </tr>
+  <tr>
+    <td>noon - 1.00 pm</td>
+    <td>Lunch</td>
+  </tr>
+  <tr>
+    <td>1.00 - 2.00 pm</td>
+    <td>Panel Discussion (Hendrik Baier, Sumit Gulwani & Abhinav Verma)</td>
+  </tr>
+  <tr>
+    <td>2.00 - 3.00 pm</td>
+    <td>Working Groups Following Panel Discussions</td>
+  </tr>
+  <tr>
+    <td>3.00 - 4.00 pm</td>
+    <td>Reports of Working Groups</td>
+  </tr>
+  <tr>
+    <td>4.00 - 4.10 pm</td>
+    <td>Closing Remarks (Levi Lelis)</td>
+  </tr>
+
+</table>
+
+
+<h3>Explainable Search (Hendrik Baier)</h3>
+<p>
+  While AI agents based on search or online planning are state of the art in many challenging domains, famously in board games, current approaches lack the ability to explain, summarize, or visualize their plans and decisions. Users struggle to understand how observable behavior is derived from considering complex spaces of possible futures and contingencies, spanned by the available actions of the agent. This limits human trust in high-stakes scenarios, as well as effective human-AI collaboration. In my talk, I will outline my vision for the research direction of explainable search, and discuss related challenges.
+</p>
+
+<h3>Program Synthesis and Deep Learning for Heuristic Search,
+Constraint Satisfaction and Bioacoustics</h3>
+<p>
+In this talk I will present a brief overview of our recent
+work on program synthesis in the domains of video-game related
+heuristic search, constraint satisfaction and bioacoustics and how
+neural networks come into it.
+</p>
+
+
+<!-- 
+<h3>Merger with the Esports Analytics Workshop</h3>
+
+<p>
+Competitive esports is a growing worldwide phenomenon now rivaling
+traditional sports, with over 450 million views and $1 billion US
+dollars in revenue each year. Despite this significant popularity,
+much of the world remains unaware of esports — and in particular,
+research on and for esports is still extremely scarce compared to
+esports’ impact and potential. The goal of the esports analytics
+workshop is to begin to address this research gap, specifically
+looking at the research surrounding the use of esports data and
+AI. However, as this workshop has never before been run at AIIDE, for
+this first year, we are running in combination with the Strategy Games
+Workshop to help raise awareness and begin to build a community. As a
+part of the combined event, the Esports Analytics (EA) Workshop will
+bring in an invited speaker and host an informal discussion regarding
+the future of the workshop.
+</p>
+
+<h4>Invited ESports Analytics Talk</h4>
+
+<p>
+  Presenter: Amine Issa of Mobalytics (mobalytics.gg)
+</p>
+
+<p>
+  Title: "The Consumer Side of Esports Analytics"
+</p>
+
+<p>
+  Abstract: Mobalytics is focused on delivering insights to all
+  players regardless of their skill level, from the elite
+  professionals to the average joes struggling to improve. This talk
+  will highlight the key learnings from 6 years of building the
+  platform around major esports titles like League of Legends, and
+  also draw upon previous experience as a player playing
+  professionally.
+</p>
+
+<p>
+  Bio: Amine Issa earned his doctorate at the Mayo Clinic researching
+  the extremes of human performance, with his findings powering
+  development of technology in mobile health and remote monitoring. He
+  also spent decades playing video games, and competed professionally
+  for a couple years. He came to believe that there are many broader
+  lessons in performance that can be learned from the arena of
+  esports. He was able to channel both his performance and gaming
+  passions to found Mobalytics, a performance assessment and
+  optimization platform for gamers.
+</p>  
+
+-->
+
+
+<!--
+
+<h3>Tentative "Ad-hoc" Show-and-Tell Presenters</h3>
+
+<p>
+Please let us know ahead of time (by emailing mburo@ualberta.ca) if
+you'd like to show-and-tell your current work, i.e., briefly describe
+it and perhaps show a few slides or a software demo to get a
+discussion going. This will help us with time management.
+</p>
+
+<ul>
+  <li>...
+  <li>...
+</ul>
+
+<h3>Discussion Topics</h3>
+
+<p>
+  Please also let us know by email what topics you'd like to talk about in the discussion session.
+</p>
+
+<ul>
+  <li>...
+  <li>...
+</ul>  
+
+-->
+
+
+</body>
+</html>
+
+<!--
+meet.google.com/yvs-xsit-xxp
+-->
