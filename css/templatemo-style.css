@@ -384,6 +384,24 @@ ul.tm-list-plus li:before {
 
 .tm-about-person { max-width: 280px; }
 
+.tm-about-social-bluesky-icon {
+  width: 42px;
+  height: 42px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #cfd0d1;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  padding-top: 10px;
+  transition: all 0.3s ease;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
 .tm-about-social-icon {
   width: 42px;
   height: 42px;
@@ -397,9 +415,19 @@ ul.tm-list-plus li:before {
   transition: all 0.3s ease;
 }
 
+.tm-about-social-link:hover > .tm-about-social-bluesky-icon {
+  background-color: #979899;
+}
+
 .tm-about-social-link:hover > .tm-about-social-icon {
   background-color: #979899;
 }
+
+.tm-about-social-link {
+  display: inline-block; 
+  vertical-align: middle; 
+}
+
 
 @media (max-width: 767px) {
   .tm-about-person { margin-bottom: 50px; }
