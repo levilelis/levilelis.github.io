@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Levi Lelis - UAlberta</title>
+    <meta name="description" content="Levi H. S. Lelis — Associate Professor at the University of Alberta, Canada CIFAR AI Chair. Research in programmatic representations for sequential decision-making." />
+    <link rel="icon" href="img/UA-COLOUR.png" type="image/png" />
 <!--
 Next Level CSS Template
 https://templatemo.com/tm-532-next-level
@@ -13,20 +15,23 @@ https://templatemo.com/tm-532-next-level
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/templatemo-style.css" />
+    <style>
+      .tm-nav-col { justify-content: flex-start; padding-left: 0; }
+      .tm-navbar { padding-left: 10px; }
+      .navbar-nav .nav-item:first-child .nav-link { margin-left: 0; }
+    </style>
   </head>
   <body>
     <div class="container-fluid">
         <div class="col-11 tm-page-cols-container">
           <div class="tm-page-col-left">
             <div class="col-lg-10 col-10">
+              <img src="img/UA-COLOUR.png" class="img-fluid" alt="University of Alberta"/>
             </div>
           </div>
 
         <div class="tm-page-col-right">
           <div class="col-lg-12 col-2 tm-nav-col">
-          <div class="col-lg-3 col-20">
-          <img src="img/UA-COLOUR.png" class="img-fluid"/>
-        </div>
           <div class="tm-nav">
             <nav class="navbar navbar-expand-lg navbar-light tm-navbar">
               <button
@@ -39,12 +44,11 @@ https://templatemo.com/tm-532-next-level
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto mr-0">
+              <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
                     <div class="tm-nav-link-highlight"></div>
                     <a class="nav-link" href="index.html">Home</a>
-                  </li>
                   </li>
                   <li class="nav-item active">
                     <div class="tm-nav-link-highlight"></div>
@@ -52,12 +56,15 @@ https://templatemo.com/tm-532-next-level
                   </li>
                   <li class="nav-item active">
                     <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="people.html">People</a>
+                  </li>
+                  <li class="nav-item active">
+                    <div class="tm-nav-link-highlight"></div>
                     <a class="nav-link" href="research.html">Research</a>
                   </li>
                   <li class="nav-item active">
                     <div class="tm-nav-link-highlight"></div>
-                    <a class="nav-link" href="people.html"
-                    >People<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="talks.html">Talks</a>
                   </li>
                 </ul>
               </div>
@@ -74,6 +81,7 @@ https://templatemo.com/tm-532-next-level
                    <img
                       src="img/levi_amii.jpg"
                       class="img-fluid"
+                      alt="Levi Lelis"
                     />
             </div>
         </div>
@@ -87,7 +95,7 @@ https://templatemo.com/tm-532-next-level
                 Associate Professor, Canada CIFAR AI Chair with Amii
               </h5>
               <p class="mb-2">
-               I am an Associate Professor in the Department of Computing Science at the <a href="http://ualberta.ca">University of Alberta</a>, Canada. Previously, I was a Professor for six years at the beautiful <a href="http://ufv.br">Universidade Federal de Viçosa</a>, Brazil.
+               I am an Associate Professor in the Department of Computing Science at the <a href="https://ualberta.ca">University of Alberta</a>, Canada. Previously, I was a Professor for six years at the beautiful <a href="https://ufv.br">Universidade Federal de Viçosa</a>, Brazil.
               </p>
               <p class="mb-2">
                 My research is dedicated to the development of principled algorithms to solve combinatorial search problems. We are currently focused on combinatorial search problems arising from the search for programmatic representations to sequential decision-making problems (e.g., computer programs encoding policies for solving reinforcement learning problems). I believe that the most promising path to creating agents that learn continually, efficiently, and safely is to represent the agents' knowledge programmatically. While programmatic representations offer many advantages, including modularity and reusability, they present a significant challenge: the need to search over large, non-differentiable spaces not suited for gradient descent methods. Addressing this challenge is the current focus of my work.
@@ -100,19 +108,17 @@ https://templatemo.com/tm-532-next-level
                 Would you like to join my group? I am looking for motivated <b>graduate students</b> interested in programmatic representations for solving sequential decision-making problems. If you're interested in joining my group, contact me by email with a description of your background and why you are interested in programmatic representations for solving sequential decision-making problems.
               </p>
               <p>
-                If you are looking for recent representative papers from our group to read before contacting me, please take a look at our recent work on using programmatic representationg for solving reinforcement learning problems: <a href="papers/2024/alikhasiL24.pdf">Dec-Options</a>, <a href="papers/2024/carvalhoTL24.pdf">Searching in Syntax Spaces</a>, and <a href="papers/2024/moraesL24.pdf">Searching in Semantic Spaces</a>.
+                If you are looking for recent representative papers from our group to read before contacting me, please take a look at our recent work on using programmatic representations for solving reinforcement learning problems: <a href="papers/2024/alikhasiL24.pdf">Dec-Options</a>, <a href="papers/2024/carvalhoTL24.pdf">Searching in Syntax Spaces</a>, and <a href="papers/2024/moraesL24.pdf">Searching in Semantic Spaces</a>.
               </p>
               <p>
               	The following talk, presented at IPAM's Naturalistic Approaches to Artificial Intelligence Workshop, highlights recent work we've done on programmatic representations for sequential decision-making.
               </p>
-              <center>
-              <div class="tm-section-2-text tm-mb-4">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/UNpg05yxc3o?si=LCozFqXLZ6bm8IJ0"
-                  title="YouTube video player" frameborder="0"
+              <div class="embed-responsive embed-responsive-16by9 tm-mb-4">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/UNpg05yxc3o?si=LCozFqXLZ6bm8IJ0"
+                  title="Programmatic Representations for Sequential Decision-Making" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen></iframe>
               </div>
-              </center>
 
               <div class="row tm-pt-4 tm-pb-6">
                 <div class="col-md-6 tm-home-section-2-left">
@@ -140,7 +146,7 @@ https://templatemo.com/tm-532-next-level
 							href="https://bsky.app/profile/programsynthesis.bsky.social"
 							class="tm-about-social-link"
 						>
-						  <img src="img/Bluesky_Logo.png" class="tm-about-social-bluesky-icon">
+						  <img src="img/Bluesky_Logo.png" class="tm-about-social-bluesky-icon" alt="Bluesky">
 						</a>
                           <a
                             href="https://twitter.com/levilelis"
@@ -159,21 +165,25 @@ https://templatemo.com/tm-532-next-level
                   <h3 class="tm-text-secondary tm-mb-2">
                     Research Funding
                   </h3>
-                  <a href="http://amii.ca"><img
+                  <a href="https://amii.ca"><img
                     src="img/Amii-colour-logo.png"
                     class="tm-gallery-item"
+                    alt="Amii"
                   /></a>
                   <img
                     src="img/cifar-logo-rgb-colour.png"
                     class="tm-gallery-item"
+                    alt="CIFAR"
                   />
                   <img
                     src="img/img-logo2-en.png"
                     class="tm-gallery-item"
+                    alt="NSERC"
                   />
                   <img
                     src="img/alliance_logo_english.png"
                     class="tm-gallery-item"
+                    alt="Digital Research Alliance of Canada"
                   />
                   </div>
                </div>
@@ -187,5 +197,13 @@ https://templatemo.com/tm-532-next-level
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function() {
+        var page = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(function(a) {
+          if (a.getAttribute('href') === page) a.style.fontWeight = '700';
+        });
+      })();
+    </script>
   </body>
 </html>

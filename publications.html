@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Levi Lelis - UAlberta</title>
+    <title>Levi Lelis - Publications</title>
+    <meta name="description" content="Publications by Levi H. S. Lelis, Associate Professor at the University of Alberta." />
+    <link rel="icon" href="img/UA-COLOUR.png" type="image/png" />
 <!--
 Next Level CSS Template
 https://templatemo.com/tm-532-next-level
@@ -13,20 +15,29 @@ https://templatemo.com/tm-532-next-level
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/templatemo-style.css" />
+    <style>
+      .tm-nav-col { justify-content: flex-start; padding-left: 0; }
+      .tm-navbar { padding-left: 10px; }
+      .navbar-nav .nav-item:first-child .nav-link { margin-left: 0; }
+      .bib-toggle { font-size: 0.8em; color: #888; text-decoration: none; }
+      .bib-toggle:hover { color: #444; text-decoration: none; }
+      .bib-block { position: relative; }
+      .bib-block pre { background: #f8f8f8; border: 1px solid #ddd; padding: 10px 36px 10px 10px; font-size: 0.78em; white-space: pre; overflow-x: auto; margin-top: 5px; }
+      .bib-copy-btn { position: absolute; top: 10px; right: 8px; background: none; border: none; cursor: pointer; color: #bbb; font-size: 0.9em; padding: 2px 4px; line-height: 1; }
+      .bib-copy-btn:hover { color: #555; }
+    </style>
   </head>
   <body>
 <div class="container-fluid">
         <div class="col-11 tm-page-cols-container">
           <div class="tm-page-col-left">
             <div class="col-lg-10 col-10">
+              <img src="img/UA-COLOUR.png" class="img-fluid" alt="University of Alberta"/>
             </div>
           </div>
 
         <div class="tm-page-col-right">
           <div class="col-lg-12 col-2 tm-nav-col">
-          <div class="col-lg-3 col-20">
-          <img src="img/UA-COLOUR.png" class="img-fluid"/>
-        </div>
           <div class="tm-nav">
             <nav class="navbar navbar-expand-lg navbar-light tm-navbar">
               <button
@@ -39,12 +50,11 @@ https://templatemo.com/tm-532-next-level
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto mr-0">
+              <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
                     <div class="tm-nav-link-highlight"></div>
                     <a class="nav-link" href="index.html">Home</a>
-                  </li>
                   </li>
                   <li class="nav-item active">
                     <div class="tm-nav-link-highlight"></div>
@@ -52,12 +62,15 @@ https://templatemo.com/tm-532-next-level
                   </li>
                   <li class="nav-item active">
                     <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="people.html">People</a>
+                  </li>
+                  <li class="nav-item active">
+                    <div class="tm-nav-link-highlight"></div>
                     <a class="nav-link" href="research.html">Research</a>
                   </li>
                   <li class="nav-item active">
                     <div class="tm-nav-link-highlight"></div>
-                    <a class="nav-link" href="people.html"
-                    >People<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="talks.html">Talks</a>
                   </li>
                 </ul>
               </div>
@@ -83,41 +96,45 @@ https://templatemo.com/tm-532-next-level
 
             <p>
             In this page you will find a list of selected papers I have co-authored and co-edited. All papers are freely available for download. The images in the co-edited publication section link to the AAAI website with all papers I have co-edited. See also my <a href="https://scholar.google.com/citations?user=eoXoLFgAAAAJ">Google Scholar profile</a>.
-            <br>
+            </p>
             <h4 class="tm-text-secondary tm-mb-0">
               Co-Edited Publications
             </h4>
-            <center>
+            <div class="text-center">
               <a href="https://aaai.org/Library/SOCS/socs15contents.php">
                 <img
                     src="img/socs15.jpg"
-                    class="center"
+                    alt="SoCS 2015 proceedings"
                 />
               </a>
               <a href="https://www.aaai.org/Library/AIIDE/aiide19contents.php">
                 <img
                     src="img/aiide19.jpg"
-                    class="center"
+                    alt="AIIDE 2019 proceedings"
                 />
               </a>
-            </center>
+            </div>
             <br>
 
             <h4 class="tm-text-secondary tm-mb-0">
               Conference and Journal Publications
             </h4>
 
-            <p class="mb-2">
-<!--               <h3 class="tm-text-secondary tm-mb-0">
-                2021
-              </h3> -->
-              <p>
+            <p>
               <b><a href="papers/2025/moraesSBL25.pdf">InnateCoder: Learning Programmatic Options with Foundation Models</a></b>
               <br>
               Rubens Moraes, Quazi Asif Sadmine, Hendrik Baier, and Levi Lelis
               <br>
               International Joint Conference on Artificial Intelligence (IJCAI), 2025.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-moraesSBL25'); return false;">[bibtex]</a>
+              <div id="bib-moraesSBL25" class="bib-block" style="display:none;"><pre>@inproceedings{moraesSBL25,
+  title     = {InnateCoder: Learning Programmatic Options with Foundation Models},
+  author    = {Rubens Moraes and Quazi Asif Sadmine and Hendrik Baier and Levi H. S. Lelis},
+  booktitle = {International Joint Conference on Artificial Intelligence},
+  year      = {2025},
+}</pre></div>
+
               <p>
               <b><a href="papers/2025/tueroBL25.pdf">Subgoal-Guided Policy Heuristic Search with Learned Subgoals</a></b>
               <br>
@@ -125,6 +142,14 @@ https://templatemo.com/tm-532-next-level
               <br>
               International Conference on Machine Learning (ICML), 2025.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-tueroBL25'); return false;">[bibtex]</a>
+              <div id="bib-tueroBL25" class="bib-block" style="display:none;"><pre>@inproceedings{tueroBL25,
+  title     = {Subgoal-Guided Policy Heuristic Search with Learned Subgoals},
+  author    = {Jake Tuero and Michael Buro and Levi H. S. Lelis},
+  booktitle = {International Conference on Machine Learning},
+  year      = {2025},
+}</pre></div>
+
               <p>
               <b><a href="papers/2024/sadmineBL24.pdf">Language Models Speed Up Local Search for Finding Programmatic Policies</a></b>
               <br>
@@ -132,6 +157,14 @@ https://templatemo.com/tm-532-next-level
               <br>
               Transactions on Machine Learning Research (TMLR), 2024.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-sadmineBL24'); return false;">[bibtex]</a>
+              <div id="bib-sadmineBL24" class="bib-block" style="display:none;"><pre>@article{sadmineBL24,
+  title   = {Language Models Speed Up Local Search for Finding Programmatic Policies},
+  author  = {Quazi Asif Sadmine and Hendrik Baier and Levi H. S. Lelis},
+  journal = {Transactions on Machine Learning Research},
+  year    = {2024},
+}</pre></div>
+
               <p>
               <b><a href="papers/2024/alikhasiL24.pdf">Unveiling Options with Neural Network Decomposition</a></b>
               <br>
@@ -139,6 +172,14 @@ https://templatemo.com/tm-532-next-level
               <br>
               In the Proceedings of the International Conference on Learning Representations (ICLR), 2024.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-alikhasiL24'); return false;">[bibtex]</a>
+              <div id="bib-alikhasiL24" class="bib-block" style="display:none;"><pre>@inproceedings{alikhasiL24,
+  title     = {Unveiling Options with Neural Network Decomposition},
+  author    = {Mahdi Alikhasi and Levi H. S. Lelis},
+  booktitle = {International Conference on Learning Representations},
+  year      = {2024},
+}</pre></div>
+
               <p>
               <b><a href="papers/2024/carvalhoTL24.pdf">Reclaiming the Source of Programmatic Policies: Programmatic versus Latent Spaces</a></b>
               <br>
@@ -146,6 +187,14 @@ https://templatemo.com/tm-532-next-level
               <br>
               In the Proceedings of the International Conference on Learning Representations (ICLR), 2024.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-carvalhoTL24'); return false;">[bibtex]</a>
+              <div id="bib-carvalhoTL24" class="bib-block" style="display:none;"><pre>@inproceedings{carvalhoTL24,
+  title     = {Reclaiming the Source of Programmatic Policies: Programmatic versus Latent Spaces},
+  author    = {Tales Carvalho and Kenneth Tjhia and Levi H. S. Lelis},
+  booktitle = {International Conference on Learning Representations},
+  year      = {2024},
+}</pre></div>
+
               <p>
               <b><a href="papers/2024/moraesL24.pdf">Searching for Programmatic Policies in Semantic Spaces</a></b>
               <br>
@@ -153,6 +202,14 @@ https://templatemo.com/tm-532-next-level
               <br>
               In the Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI), 2024.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-moraesL24'); return false;">[bibtex]</a>
+              <div id="bib-moraesL24" class="bib-block" style="display:none;"><pre>@inproceedings{moraesL24,
+  title     = {Searching for Programmatic Policies in Semantic Spaces},
+  author    = {Rubens Moraes and Levi H. S. Lelis},
+  booktitle = {International Joint Conference on Artificial Intelligence},
+  year      = {2024},
+}</pre></div>
+
               <p>
               <b><a href="papers/2024/rahmanETPL24.pdf">Synthesizing Libraries of Programs with Auxiliary Functions</a></b>
               <br>
@@ -160,6 +217,14 @@ https://templatemo.com/tm-532-next-level
               <br>
               Transactions on Machine Learning Research (TMLR), 2024.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-rahmanETPL24'); return false;">[bibtex]</a>
+              <div id="bib-rahmanETPL24" class="bib-block" style="display:none;"><pre>@article{rahmanETPL24,
+  title   = {Synthesizing Libraries of Programs with Auxiliary Functions},
+  author  = {Habibur Rahman and Thirupathi Reddy Emireddy and Kenneth Tjhia and Elham Parhizkar and Levi H. S. Lelis},
+  journal = {Transactions on Machine Learning Research},
+  year    = {2024},
+}</pre></div>
+
               <p>
               <b><a href="papers/2024/pendurkarLSS24.pdf">Curriculum Generation for Learning Guiding Functions in State-Space Search Algorithms</a></b>
               <br>
@@ -167,6 +232,14 @@ https://templatemo.com/tm-532-next-level
               <br>
               In the Proceedings of the Symposium on Combinatorial Search (SoCS), 2024.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-pendurkarLSS24'); return false;">[bibtex]</a>
+              <div id="bib-pendurkarLSS24" class="bib-block" style="display:none;"><pre>@inproceedings{pendurkarLSS24,
+  title     = {Curriculum Generation for Learning Guiding Functions in State-Space Search Algorithms},
+  author    = {Sumedh Pendurkar and Levi Lelis and Nathan Sturtevant and Guni Sharon},
+  booktitle = {Symposium on Combinatorial Search},
+  year      = {2024},
+}</pre></div>
+
               <p>
               <b><a href="papers/2023/ameenL23.pdf">Program Synthesis with Best-First Bottom-Up Search</a></b>
               <br>
@@ -174,6 +247,16 @@ https://templatemo.com/tm-532-next-level
               <br>
               Journal of Artificial Intelligence Research (JAIR), 2023.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-ameenL23'); return false;">[bibtex]</a>
+              <div id="bib-ameenL23" class="bib-block" style="display:none;"><pre>@article{ameenL23,
+  title   = {Program Synthesis with Best-First Bottom-Up Search},
+  author  = {Ameen, Saqib and Lelis, Levi H. S.},
+  journal = {Journal of Artificial Intelligence Research},
+  volume  = {77},
+  year    = {2023},
+  pages   = {1271--1310},
+}</pre></div>
+
               <p>
               <b><a href="papers/2023/moraesAFL23.pdf">Choosing Well Your Opponents:
 How to Guide the Synthesis of Programmatic Strategies</a></b>
@@ -182,6 +265,14 @@ How to Guide the Synthesis of Programmatic Strategies</a></b>
               <br>
               In the Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI), 2023.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-moraesAFL23'); return false;">[bibtex]</a>
+              <div id="bib-moraesAFL23" class="bib-block" style="display:none;"><pre>@inproceedings{moraesAFL23,
+  title     = {Choosing Well Your Opponents: How to Guide the Synthesis of Programmatic Strategies},
+  author    = {Rubens Moraes and David Aleixo and Lucas Ferreira and Levi H. S. Lelis},
+  booktitle = {International Joint Conference on Artificial Intelligence},
+  year      = {2023},
+}</pre></div>
+
               <p>
               <b><a href="papers/2023/orseauHL23.pdf">Levin Tree Search with Context Models</a> (Distinguished Paper Award)</b>
               <br>
@@ -189,6 +280,14 @@ How to Guide the Synthesis of Programmatic Strategies</a></b>
               <br>
               In the Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI), 2023.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-orseauHL23'); return false;">[bibtex]</a>
+              <div id="bib-orseauHL23" class="bib-block" style="display:none;"><pre>@inproceedings{orseauHL23,
+  title     = {Levin Tree Search with Context Models},
+  author    = {Laurent Orseau and Marcus Hutter and Levi H. S. Lelis},
+  booktitle = {International Joint Conference on Artificial Intelligence},
+  year      = {2023},
+}</pre></div>
+
               <p>
               <b><a href="papers/2023/abdollahiATL23.pdf">Can You Improve My Code? Optimizing Programs with Local Search</a></b>
               <br>
@@ -196,6 +295,14 @@ How to Guide the Synthesis of Programmatic Strategies</a></b>
               <br>
               In the Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI), 2023.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-abdollahiATL23'); return false;">[bibtex]</a>
+              <div id="bib-abdollahiATL23" class="bib-block" style="display:none;"><pre>@inproceedings{abdollahiATL23,
+  title     = {Can You Improve My Code? Optimizing Programs with Local Search},
+  author    = {Fatemeh Abdollahi and Saqib Ameen and Matthew Taylor and Levi H. S. Lelis},
+  booktitle = {International Joint Conference on Artificial Intelligence},
+  year      = {2023},
+}</pre></div>
+
               <p>
               <b><a href="papers/2023/aleixoL23.pdf">Show Me the Way! Bilevel Search for Synthesizing Programmatic Strategies</a></b>
               <br>
@@ -203,6 +310,14 @@ How to Guide the Synthesis of Programmatic Strategies</a></b>
               <br>
               In the Proceedings of the Conference on Artificial Intelligence (AAAI), 2023.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-aleixoL23'); return false;">[bibtex]</a>
+              <div id="bib-aleixoL23" class="bib-block" style="display:none;"><pre>@inproceedings{aleixoL23,
+  title     = {Show Me the Way! Bilevel Search for Synthesizing Programmatic Strategies},
+  author    = {David Aleixo and Levi H. S. Lelis},
+  booktitle = {AAAI Conference on Artificial Intelligence},
+  year      = {2023},
+}</pre></div>
+
               <p>
               <b><a href="papers/2022/medeirosAL22.pdf">What can we Learn Even From the Weakest? Learning Sketches for Programmatic Strategies</a></b>
               <br>
@@ -210,6 +325,14 @@ How to Guide the Synthesis of Programmatic Strategies</a></b>
               <br>
               In the Proceedings of the Conference on Artificial Intelligence (AAAI), 2022.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-medeirosAL22'); return false;">[bibtex]</a>
+              <div id="bib-medeirosAL22" class="bib-block" style="display:none;"><pre>@inproceedings{medeirosAL22,
+  title     = {What can we Learn Even From the Weakest? Learning Sketches for Programmatic Strategies},
+  author    = {Leandro Medeiros and David Aleixo and Levi H. S. Lelis},
+  booktitle = {AAAI Conference on Artificial Intelligence},
+  year      = {2022},
+}</pre></div>
+
               <p>
               <b><a href="papers/2022/lelisNCSEB22.pdf">Learning Curricula for Humans: An Empirical Study with Puzzles from The Witness.</a></b>
               <br>
@@ -217,6 +340,14 @@ How to Guide the Synthesis of Programmatic Strategies</a></b>
               <br>
               In the Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI), 2022.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelisNCSEB22'); return false;">[bibtex]</a>
+              <div id="bib-lelisNCSEB22" class="bib-block" style="display:none;"><pre>@inproceedings{lelisNCSEB22,
+  title     = {Learning Curricula for Humans: An Empirical Study with Puzzles from The Witness},
+  author    = {Levi H. S. Lelis and Joao Nova and Eugene Chen and Nathan Sturtevant and Carrie Demmans Epp and Michael Bowling},
+  booktitle = {International Joint Conference on Artificial Intelligence},
+  year      = {2022},
+}</pre></div>
+
               <p>
               <b><a href="papers/2022/moraesNL22.pdf">Asymmetric Action Abstractions for Planning in Real-Times Strategy Games</a></b>
               <br>
@@ -224,6 +355,14 @@ How to Guide the Synthesis of Programmatic Strategies</a></b>
               <br>
               Journal of Artificial Intelligence Research (JAIR), 2022.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-moraesNL22'); return false;">[bibtex]</a>
+              <div id="bib-moraesNL22" class="bib-block" style="display:none;"><pre>@article{moraesNL22,
+  title   = {Asymmetric Action Abstractions for Planning in Real-Time Strategy Games},
+  author  = {Rubens Moraes and Mario Nascimento and Levi H. S. Lelis},
+  journal = {Journal of Artificial Intelligence Research},
+  year    = {2022},
+}</pre></div>
+
               <p>
               <b><a href="papers/2022/ferreiraMWL22.pdf">Controlling Perceived Emotion in Symbolic Music Generation with Monte Carlo Tree Search</a></b>
               <br>
@@ -231,6 +370,14 @@ How to Guide the Synthesis of Programmatic Strategies</a></b>
               <br>
               In the Proceedings of the AAAI Conference on AI and Interactive Digital Entertainment (AIIDE), 2022.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-ferreiraMWL22'); return false;">[bibtex]</a>
+              <div id="bib-ferreiraMWL22" class="bib-block" style="display:none;"><pre>@inproceedings{ferreiraMWL22,
+  title     = {Controlling Perceived Emotion in Symbolic Music Generation with Monte Carlo Tree Search},
+  author    = {Lucas Ferreira and Lili Mou and Jim Whitehead and Levi H. S. Lelis},
+  booktitle = {AAAI Conference on AI and Interactive Digital Entertainment},
+  year      = {2022},
+}</pre></div>
+
               <p>
               <b><a href="papers/2022/bulitkoWSL22.pdf">Portability and Explainability of Synthesized Formula-based Heuristics.</a></b>
               <br>
@@ -238,6 +385,13 @@ How to Guide the Synthesis of Programmatic Strategies</a></b>
               <br>
               In the Proceedings of the Symposium on Combinatorial Search (SoCS), 2022.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-bulitkoWSL22'); return false;">[bibtex]</a>
+              <div id="bib-bulitkoWSL22" class="bib-block" style="display:none;"><pre>@inproceedings{bulitkoWSL22,
+  title     = {Portability and Explainability of Synthesized Formula-based Heuristics},
+  author    = {Vadim Bulitko and Shuwei Wang and Justin Stevens and Levi H. S. Lelis},
+  booktitle = {Symposium on Combinatorial Search},
+  year      = {2022},
+}</pre></div>
 
               <p>
               <b><a href="papers/2021/silvaBL21.pdf">
@@ -247,6 +401,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               Journal of Artificial Intelligence Research (JAIR) - Research Note, 2021.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-silvaBL21'); return false;">[bibtex]</a>
+              <div id="bib-silvaBL21" class="bib-block" style="display:none;"><pre>@article{silvaBL21,
+  title   = {Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curling},
+  author  = {Cleyton Silva and Michael Bowling and Levi H. S. Lelis},
+  journal = {Journal of Artificial Intelligence Research},
+  year    = {2021},
+}</pre></div>
+
               <p>
               <b><a href="papers/2021/orseauL21.pdf">Policy-Guided Heuristic Search with Guarantees</a></b>
               <br>
@@ -254,6 +416,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Conference on Artificial Intelligence (AAAI), 2021.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-orseauL21'); return false;">[bibtex]</a>
+              <div id="bib-orseauL21" class="bib-block" style="display:none;"><pre>@inproceedings{orseauL21,
+  title     = {Policy-Guided Heuristic Search with Guarantees},
+  author    = {Laurent Orseau and Levi H. S. Lelis},
+  booktitle = {AAAI Conference on Artificial Intelligence},
+  year      = {2021},
+}</pre></div>
+
               <p>
               <b><a href="papers/2021/marinoMOTL21.pdf">Programmatic Strategies for Real-Time Strategy Games</a></b>
               <br>
@@ -261,6 +431,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Conference on Artificial Intelligence (AAAI), 2021.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-marinoMOTL21'); return false;">[bibtex]</a>
+              <div id="bib-marinoMOTL21" class="bib-block" style="display:none;"><pre>@inproceedings{marinoMOTL21,
+  title     = {Programmatic Strategies for Real-Time Strategy Games},
+  author    = {Julian Mari{\~n}o and Rubens Moraes and Tassiana Oliveira and Claudio Toledo and Levi H. S. Lelis},
+  booktitle = {AAAI Conference on Artificial Intelligence},
+  year      = {2021},
+}</pre></div>
+
               <p>
               <b><a href="papers/2021/martinezGKL21.pdf">Improving the Performance-Compatibility Tradeoff with Personalized Objective Functions</a></b>
               <br>
@@ -268,6 +446,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Conference on Artificial Intelligence (AAAI), 2021.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-martinezGKL21'); return false;">[bibtex]</a>
+              <div id="bib-martinezGKL21" class="bib-block" style="display:none;"><pre>@inproceedings{martinezGKL21,
+  title     = {Improving the Performance-Compatibility Tradeoff with Personalized Objective Functions},
+  author    = {Jonathan Martinez and Kobi Gal and Ece Kamar and Levi H. S. Lelis},
+  booktitle = {AAAI Conference on Artificial Intelligence},
+  year      = {2021},
+}</pre></div>
+
               <p>
               <b><a href="papers/2021/pereiraCL21.pdf">Birds in Boots: Learning to Play Angry Birds with Policy-Guided Search</a></b>
               <br>
@@ -275,11 +461,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the AAAI Conference on AI and Interactive Digital Entertainment (AIIDE), 2021.
               <br>
-<!--               <br> -->
-<!--
-              <h3 class="tm-text-secondary tm-mb-0">
-                2020
-              </h3> -->
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-pereiraCL21'); return false;">[bibtex]</a>
+              <div id="bib-pereiraCL21" class="bib-block" style="display:none;"><pre>@inproceedings{pereiraCL21,
+  title     = {Birds in Boots: Learning to Play Angry Birds with Policy-Guided Search},
+  author    = {Lucas Pereira and Luiz Chaimowicz and Levi H. S. Lelis},
+  booktitle = {AAAI Conference on AI and Interactive Digital Entertainment},
+  year      = {2021},
+}</pre></div>
+
               <p>
               <b><a href="papers/2020/ahmadLB20.pdf">Marginal Utility for Planning in Continuous or Large Discrete Action Spaces</a></b>
               <br>
@@ -287,6 +476,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Conference on Neural Information Processing Systems (NeurIPS), 2020.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-ahmadLB20'); return false;">[bibtex]</a>
+              <div id="bib-ahmadLB20" class="bib-block" style="display:none;"><pre>@inproceedings{ahmadLB20,
+  title     = {Marginal Utility for Planning in Continuous or Large Discrete Action Spaces},
+  author    = {Zaheen Ahmad and Levi Lelis and Michael Bowling},
+  booktitle = {Conference on Neural Information Processing Systems},
+  year      = {2020},
+}</pre></div>
+
               <p>
               <b><a href="papers/2020/lelis20.pdf">Planning Algorithms for Zero-Sum Games with Exponential Action Spaces: A Unifying Perspective.</a></b> <b><a href="https://youtu.be/ywKdhM60AkM">[video]</a></b>
               <br>
@@ -294,6 +491,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the International Joint Conference on Artificial Intelligence - Survey Track (IJCAI), 2020.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelis20'); return false;">[bibtex]</a>
+              <div id="bib-lelis20" class="bib-block" style="display:none;"><pre>@inproceedings{lelis20,
+  title     = {Planning Algorithms for Zero-Sum Games with Exponential Action Spaces: A Unifying Perspective},
+  author    = {Levi H. S. Lelis},
+  booktitle = {International Joint Conference on Artificial Intelligence},
+  year      = {2020},
+}</pre></div>
+
               <p>
               <b><a href="papers/2020/ferreiraLW20.pdf">Computer-Generated Music for Tabletop Role-Playing Games</a></b> <b><a href="https://www.youtube.com/watch?v=0VERI9KtkQk">[video]</a></b>
               <br>
@@ -301,19 +506,29 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the AAAI Conference on AI and Interactive Digital Entertainment (AIIDE), 2020.
               <br>
-<!--               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-ferreiraLW20'); return false;">[bibtex]</a>
+              <div id="bib-ferreiraLW20" class="bib-block" style="display:none;"><pre>@inproceedings{ferreiraLW20,
+  title     = {Computer-Generated Music for Tabletop Role-Playing Games},
+  author    = {Lucas Ferreira and Levi Lelis and Jim Whitehead},
+  booktitle = {AAAI Conference on AI and Interactive Digital Entertainment},
+  year      = {2020},
+}</pre></div>
 
-
-              <p> -->
-<!--               <h3 class="tm-text-secondary tm-mb-0">
-                2019
-              </h3> -->
               <p>
               <b><a href="papers/2019/bentoPL19.pdf">Procedural Generation of Initial States of Sokoban.</a></b>
               <br>
               Damaris Bento, Andre G. Pereira, and Levi Lelis.
               <br>
               In the Proceedings of the International Joint Conference on Artificial Intelligence, (IJCAI) 2019.
+              <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-bentoPL19'); return false;">[bibtex]</a>
+              <div id="bib-bentoPL19" class="bib-block" style="display:none;"><pre>@inproceedings{bentoPL19,
+  title     = {Procedural Generation of Initial States of Sokoban},
+  author    = {Damaris Bento and Andre G. Pereira and Levi H. S. Lelis},
+  booktitle = {International Joint Conference on Artificial Intelligence},
+  year      = {2019},
+}</pre></div>
+
               <p>
               <b><a href="papers/2019/helmertLLOS19.pdf">Iterative Budgeted Exponential Search.</a></b>
               <br>
@@ -321,6 +536,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the International Joint Conference on Artificial Intelligence, (IJCAI) 2019.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-helmertLLOS19'); return false;">[bibtex]</a>
+              <div id="bib-helmertLLOS19" class="bib-block" style="display:none;"><pre>@inproceedings{helmertLLOS19,
+  title     = {Iterative Budgeted Exponential Search},
+  author    = {Malte Helmert and Tor Lattimore and Levi Lelis and Laurent Orseau and Nathan Sturtevant},
+  booktitle = {International Joint Conference on Artificial Intelligence},
+  year      = {2019},
+}</pre></div>
+
               <p>
               <b><a href="papers/2019/marinoMTL19.pdf">Evolving Action Abstractions for Real-Time Planning in Extensive-Form Games</a></b>
               <br>
@@ -328,6 +551,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Conference on Artificial Intelligence (AAAI), 2019.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-marinoMTL19'); return false;">[bibtex]</a>
+              <div id="bib-marinoMTL19" class="bib-block" style="display:none;"><pre>@inproceedings{marinoMTL19,
+  title     = {Evolving Action Abstractions for Real-Time Planning in Extensive-Form Games},
+  author    = {Julian Marino and Rubens O. Moraes and Claudio Toledo and Levi H. S. Lelis},
+  booktitle = {AAAI Conference on Artificial Intelligence},
+  year      = {2019},
+}</pre></div>
+
               <p>
               <b><a href="papers/2019/padovaniFL19.pdf">Be Inaccurate but don't be Indecisive: How Error Distribution Can Affect User Experience</a></b>
               <br>
@@ -335,18 +566,29 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Conference on Artificial Intelligence (AAAI), 2019.
               <br>
-			  <p>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-padovaniFL19'); return false;">[bibtex]</a>
+              <div id="bib-padovaniFL19" class="bib-block" style="display:none;"><pre>@inproceedings{padovaniFL19,
+  title     = {Be Inaccurate but don't be Indecisive: How Error Distribution Can Affect User Experience},
+  author    = {Rafael Padovani and Lucas N. Ferreira and Levi H. S. Lelis},
+  booktitle = {AAAI Conference on Artificial Intelligence},
+  year      = {2019},
+}</pre></div>
+
+		  <p>
               <b><a href="papers/2019/silvaMLG19.pdf">Strategy Generation for Multiunit Real-Time Games via Voting</a></b>
               <br>
               Cleyton Silva, Rubens Moraes, Levi Lelis, and Ya'akov (Kobi) Gal
               <br>
               IEEE Transactions on Games, 2019.
               <br>
-<!--               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-silvaMLG19'); return false;">[bibtex]</a>
+              <div id="bib-silvaMLG19" class="bib-block" style="display:none;"><pre>@article{silvaMLG19,
+  title   = {Strategy Generation for Multiunit Real-Time Games via Voting},
+  author  = {Cleyton Silva and Rubens Moraes and Levi Lelis and Ya'akov (Kobi) Gal},
+  journal = {IEEE Transactions on Games},
+  year    = {2019},
+}</pre></div>
 
-              <h3 class="tm-text-secondary tm-mb-0">
-                2018
-              </h3> -->
               <p>
               <b><a href="papers/2018/orseauLLW18.pdf">Single-Agent Policy Tree Search with Guarantees</a></b>
               <br>
@@ -354,6 +596,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Conference on Neural Information Processing Systems (NeurIPS), 2018.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-orseauLLW18'); return false;">[bibtex]</a>
+              <div id="bib-orseauLLW18" class="bib-block" style="display:none;"><pre>@inproceedings{orseauLLW18,
+  title     = {Single-Agent Policy Tree Search with Guarantees},
+  author    = {Laurent Orseau and Levi Lelis and Tor Lattimore and Theophane Weber},
+  booktitle = {Conference on Neural Information Processing Systems},
+  year      = {2018},
+}</pre></div>
+
               <p>
               <b><a href="papers/2018/moraesL18.pdf">Asymmetric Action Abstractions for Multi-Unit Control in Adversarial Real-Time Games</a></b>
               <br>
@@ -361,6 +611,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Conference on Artificial Intelligence (AAAI), 2018.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-moraesL18'); return false;">[bibtex]</a>
+              <div id="bib-moraesL18" class="bib-block" style="display:none;"><pre>@inproceedings{moraesL18,
+  title     = {Asymmetric Action Abstractions for Multi-Unit Control in Adversarial Real-Time Games},
+  author    = {Rubens O. Moraes and Levi H. S. Lelis},
+  booktitle = {AAAI Conference on Artificial Intelligence},
+  year      = {2018},
+}</pre></div>
+
               <p>
               <b><a href="papers/2018/moraesMLN18.pdf">Action Abstractions for Combinatorial Multi-Armed Bandit Tree Search</a></b> <b><a href="https://youtu.be/wFT9QDLZOoY">[video]</a></b>
               <br>
@@ -368,6 +626,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the AAAI Conference on AI and Interactive Digital Entertainment (AIIDE), 2018.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-moraesMLN18'); return false;">[bibtex]</a>
+              <div id="bib-moraesMLN18" class="bib-block" style="display:none;"><pre>@inproceedings{moraesMLN18,
+  title     = {Action Abstractions for Combinatorial Multi-Armed Bandit Tree Search},
+  author    = {Rubens O. Moraes and Julian Marino and Levi Lelis and Mario Nascimento},
+  booktitle = {AAAI Conference on AI and Interactive Digital Entertainment},
+  year      = {2018},
+}</pre></div>
+
               <p>
               <b><a href="papers/2018/moraesML18.pdf">Nested-Greedy Search for Adversarial Real-Time Games</a></b> <b><a href="https://youtu.be/ImixgzT0ltc">[video]</a></b>.
               <br>
@@ -375,6 +641,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the AAAI Conference on AI and Interactive Digital Entertainment (AIIDE), 2018.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-moraesML18'); return false;">[bibtex]</a>
+              <div id="bib-moraesML18" class="bib-block" style="display:none;"><pre>@inproceedings{moraesML18,
+  title     = {Nested-Greedy Search for Adversarial Real-Time Games},
+  author    = {Rubens O. Moraes and Julian Marino and Levi H. S. Lelis},
+  booktitle = {AAAI Conference on AI and Interactive Digital Entertainment},
+  year      = {2018},
+}</pre></div>
+
               <p>
               <b><a href="papers/2018/lelisRG18.pdf">Procedural Generation of Game Maps with Human-in-the-Loop Algorithms</a></b>
               <br>
@@ -382,6 +656,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               IEEE Transactions on Games, 2018.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelisRG18'); return false;">[bibtex]</a>
+              <div id="bib-lelisRG18" class="bib-block" style="display:none;"><pre>@article{lelisRG18,
+  title   = {Procedural Generation of Game Maps with Human-in-the-Loop Algorithms},
+  author  = {Levi H. S. Lelis and Willian Reis and Ya'akov (Kobi) Gal},
+  journal = {IEEE Transactions on Games},
+  year    = {2018},
+}</pre></div>
+
               <p>
               <b><a href="papers/2018/ontanonBSML18.pdf">The First MicroRTS Artificial Intelligence Competition</a></b>
               <br>
@@ -389,13 +671,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               AI Magazine 2018.
               <br>
-<!--               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-ontanonBSML18'); return false;">[bibtex]</a>
+              <div id="bib-ontanonBSML18" class="bib-block" style="display:none;"><pre>@article{ontanonBSML18,
+  title   = {The First MicroRTS Artificial Intelligence Competition},
+  author  = {Santiago Ontanon and Nicolas Barriga and Cleyton Silva and Rubens Moraes and Levi H. S. Lelis},
+  journal = {AI Magazine},
+  year    = {2018},
+}</pre></div>
 
-              <p>
-              <h3 class="tm-text-secondary tm-mb-0">
-                2017
-              </h3>
-              <p> -->
               <p>
               <b><a href="papers/2017/lelis17.pdf">Stratified Strategy Selection for Unit Control in Real-Time Strategy Games.</a></b>
               <br>
@@ -403,6 +686,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI) 2017.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelis17'); return false;">[bibtex]</a>
+              <div id="bib-lelis17" class="bib-block" style="display:none;"><pre>@inproceedings{lelis17,
+  title     = {Stratified Strategy Selection for Unit Control in Real-Time Strategy Games},
+  author    = {Levi H. S. Lelis},
+  booktitle = {International Joint Conference on Artificial Intelligence},
+  year      = {2017},
+}</pre></div>
+
               <p>
               <b><a href="papers/2017/francoTLB17.pdf">On Creating Complementary Pattern Databases.</a></b>
               <br>
@@ -410,6 +701,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI) 2017.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-francoTLB17'); return false;">[bibtex]</a>
+              <div id="bib-francoTLB17" class="bib-block" style="display:none;"><pre>@inproceedings{francoTLB17,
+  title     = {On Creating Complementary Pattern Databases},
+  author    = {Santiago Franco and Alvaro Torralba and Levi Lelis and Mike Barley},
+  booktitle = {International Joint Conference on Artificial Intelligence},
+  year      = {2017},
+}</pre></div>
+
               <p>
               <b><a href="papers/2017/padovaniFL17.pdf">Bardo: Emotion-based Music Recommendation for Tabletop Role-Playing Games.</a></b>
               <br>
@@ -417,6 +716,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the AAAI Conference on AI and Interactive Digital Entertainment (AIIDE), 2017.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-padovaniFL17'); return false;">[bibtex]</a>
+              <div id="bib-padovaniFL17" class="bib-block" style="display:none;"><pre>@inproceedings{padovaniFL17,
+  title     = {Bardo: Emotion-based Music Recommendation for Tabletop Role-Playing Games},
+  author    = {Rafael Padovani and Lucas N. Ferreira and Levi H. S. Lelis},
+  booktitle = {AAAI Conference on AI and Interactive Digital Entertainment},
+  year      = {2017},
+}</pre></div>
+
               <p>
               <b><a href="papers/2017/summervilleMSOL17.pdf">Understanding Mario: An Evaluation of Design Metrics For Platformers.</a></b>
               <br>
@@ -424,6 +731,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In Proceedings of the International Conference on the Foundations of Digital Games (FDG) 2017.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-summervilleMSOL17'); return false;">[bibtex]</a>
+              <div id="bib-summervilleMSOL17" class="bib-block" style="display:none;"><pre>@inproceedings{summervilleMSOL17,
+  title     = {Understanding Mario: An Evaluation of Design Metrics For Platformers},
+  author    = {Adam Summerville and Julian Marino and Sam Snodgrass and Santiago Ontanon and Levi H. S. Lelis},
+  booktitle = {International Conference on the Foundations of Digital Games},
+  year      = {2017},
+}</pre></div>
+
               <p>
               <b><a href="papers/2017/camposSTL17.pdf">Mixed-Initiative Tool to Speed Up Content Creation in Physics-Based Games</a></b>
               <br>
@@ -431,13 +746,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In Proceedings of the SBGames 2017.
               <br>
-<!--               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-camposSTL17'); return false;">[bibtex]</a>
+              <div id="bib-camposSTL17" class="bib-block" style="display:none;"><pre>@inproceedings{camposSTL17,
+  title     = {Mixed-Initiative Tool to Speed Up Content Creation in Physics-Based Games},
+  author    = {Cesar R. F. G. Campos and Walter de O. Sa and Joao Marcos G. Teixeira and Levi H. S. Lelis},
+  booktitle = {Brazilian Symposium on Computer Games and Digital Entertainment},
+  year      = {2017},
+}</pre></div>
 
-              <p>
-              <h3 class="tm-text-secondary tm-mb-0">
-                2016
-              </h3>
-              <p> -->
               <p>
               <b><a href="papers/2016/marinoL16.pdf">A Computational Model based on Symmetry for Generating Visually Pleasing Maps of Platform Games.</a></b>
               <br>
@@ -445,6 +761,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the AAAI Conference on AI and Interactive Digital Entertainment (AIIDE), 2016.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-marinoL16'); return false;">[bibtex]</a>
+              <div id="bib-marinoL16" class="bib-block" style="display:none;"><pre>@inproceedings{marinoL16,
+  title     = {A Computational Model based on Symmetry for Generating Visually Pleasing Maps of Platform Games},
+  author    = {Julian Marino and Levi H. S. Lelis},
+  booktitle = {AAAI Conference on AI and Interactive Digital Entertainment},
+  year      = {2016},
+}</pre></div>
+
               <p>
               <b><a href="papers/2016/pereiraTFL16.pdf">Learning to Speed Up Evolutionary Content Generation in Physics-based Puzzle Games.</a></b>
               <br>
@@ -452,6 +776,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the IEEE International Conference on Tools with Artificial Intelligence (ICTAI), 2016.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-pereiraTFL16'); return false;">[bibtex]</a>
+              <div id="bib-pereiraTFL16" class="bib-block" style="display:none;"><pre>@inproceedings{pereiraTFL16,
+  title     = {Learning to Speed Up Evolutionary Content Generation in Physics-based Puzzle Games},
+  author    = {Leonardo Pereira and Claudio Toledo and Lucas Ferreira and Levi H. S. Lelis},
+  booktitle = {IEEE International Conference on Tools with Artificial Intelligence},
+  year      = {2016},
+}</pre></div>
+
               <p>
               <b><a href="papers/2016/lelisVNS16.pdf">Searching with a Corrupted Heuristic.</a></b>
               <br>
@@ -459,6 +791,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Symposium on Combinatorial Search (SoCS), 2016.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelisVNS16'); return false;">[bibtex]</a>
+              <div id="bib-lelisVNS16" class="bib-block" style="display:none;"><pre>@inproceedings{lelisVNS16,
+  title     = {Searching with a Corrupted Heuristic},
+  author    = {Levi H. S. Lelis and Rick Valenzano and Gabriel Nazar and Roni Stern},
+  booktitle = {Symposium on Combinatorial Search},
+  year      = {2016},
+}</pre></div>
+
               <p>
               <b><a href="papers/2016/lelisFABZH16.pdf">Heuristic Subset Selection in Classical Planning.</a></b>
               <br>
@@ -466,6 +806,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI) 2016.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelisFABZH16'); return false;">[bibtex]</a>
+              <div id="bib-lelisFABZH16" class="bib-block" style="display:none;"><pre>@inproceedings{lelisFABZH16,
+  title     = {Heuristic Subset Selection in Classical Planning},
+  author    = {Levi H. S. Lelis and Santiago Franco and Marvin Abisrror and Mike Barley and Sandra Zilles and Robert Holte},
+  booktitle = {International Joint Conference on Artificial Intelligence},
+  year      = {2016},
+}</pre></div>
+
               <p>
               <b><a href="papers/2016/hot-heuristic-search.pdf">What's Hot in Heuristic Search? (Invited Extended Abstract)</a></b>
               <br>
@@ -473,6 +821,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Conference on Artificial Intelligence (AAAI) 2016.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-sternL16'); return false;">[bibtex]</a>
+              <div id="bib-sternL16" class="bib-block" style="display:none;"><pre>@inproceedings{sternL16,
+  title     = {What's Hot in Heuristic Search?},
+  author    = {Roni Stern and Levi H. S. Lelis},
+  booktitle = {AAAI Conference on Artificial Intelligence},
+  year      = {2016},
+}</pre></div>
+
               <p>
               <b><a href="papers/2016/lelisSJAZFH16.pdf">Predicting Optimal Solution Costs with Bidirectional Stratified Sampling in Regular Search Spaces.</a></b>
               <br>
@@ -480,12 +836,13 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               Artificial Intelligence, 2016.
               <br>
-<!--               <br>
-
-              <p>
-              <h3 class="tm-text-secondary tm-mb-0">
-                2015
-              </h3> -->
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelisSJAZFH16'); return false;">[bibtex]</a>
+              <div id="bib-lelisSJAZFH16" class="bib-block" style="display:none;"><pre>@article{lelisSJAZFH16,
+  title   = {Predicting Optimal Solution Costs with Bidirectional Stratified Sampling in Regular Search Spaces},
+  author  = {Levi H. S. Lelis and Roni Stern and Shahab Jabbari Arfaee and Sandra Zilles and Ariel Felner and Robert C. Holte},
+  journal = {Artificial Intelligence},
+  year    = {2016},
+}</pre></div>
 
               <p>
               <b><a href="papers/2015/marinoRL15.pdf">An Empirical Evaluation of Evaluation Metrics of Procedurally Generated Mario Levels.</a></b>
@@ -494,6 +851,13 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the AAAI Conference on AI and Interactive Digital Entertainment (AIIDE), 2015.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-marinoRL15'); return false;">[bibtex]</a>
+              <div id="bib-marinoRL15" class="bib-block" style="display:none;"><pre>@inproceedings{marinoRL15,
+  title     = {An Empirical Evaluation of Evaluation Metrics of Procedurally Generated Mario Levels},
+  author    = {Julian Marino and Willian Reis and Levi H. S. Lelis},
+  booktitle = {AAAI Conference on AI and Interactive Digital Entertainment},
+  year      = {2015},
+}</pre></div>
 
               <p>
               <b><a href="papers/2015/reisLG15.pdf">Human Computation for Procedural Content Generation in Platform Games.</a></b>
@@ -502,6 +866,13 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Conference on Computational Intelligence and Games (CIG), 2015.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-reisLG15'); return false;">[bibtex]</a>
+              <div id="bib-reisLG15" class="bib-block" style="display:none;"><pre>@inproceedings{reisLG15,
+  title     = {Human Computation for Procedural Content Generation in Platform Games},
+  author    = {Willian Reis and Levi Lelis and Ya'akov (Kobi) Gal},
+  booktitle = {IEEE Conference on Computational Intelligence and Games},
+  year      = {2015},
+}</pre></div>
 
               <p>
               <b><a href="papers/2015/marinoL15.pdf">Feature Selection as State-Space Search: An Empirical Study in Clustering Problems.</a></b>
@@ -510,6 +881,13 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Symposium on Combinatorial Search (SoCS), 2015.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-marinoL15'); return false;">[bibtex]</a>
+              <div id="bib-marinoL15" class="bib-block" style="display:none;"><pre>@inproceedings{marinoL15,
+  title     = {Feature Selection as State-Space Search: An Empirical Study in Clustering Problems},
+  author    = {Julian Marino and Levi H. S. Lelis},
+  booktitle = {Symposium on Combinatorial Search},
+  year      = {2015},
+}</pre></div>
 
               <p>
               <b><a href="papers/2015/dechterLO15.pdf">Caching in Context-Minimal OR Spaces.</a></b>
@@ -518,6 +896,13 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Symposium on Combinatorial Search (SoCS), 2015.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-dechterLO15'); return false;">[bibtex]</a>
+              <div id="bib-dechterLO15" class="bib-block" style="display:none;"><pre>@inproceedings{dechterLO15,
+  title     = {Caching in Context-Minimal OR Spaces},
+  author    = {Rina Dechter and Levi Lelis and Lars Otten},
+  booktitle = {Symposium on Combinatorial Search},
+  year      = {2015},
+}</pre></div>
 
               <p>
               <b><a href="papers/2015/paudelLA15B.pdf">Stratified Sampling for Even Workload Partitioning Applied to Single Source Shortest Path Algorithm.</a></b>
@@ -526,20 +911,29 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Annual International Conf. on Computer Science and Software Engineering (CASCON). 2015.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-paudelLA15B'); return false;">[bibtex]</a>
+              <div id="bib-paudelLA15B" class="bib-block" style="display:none;"><pre>@inproceedings{paudelLA15B,
+  title     = {Stratified Sampling for Even Workload Partitioning Applied to Single Source Shortest Path Algorithm},
+  author    = {Jeeva Paudel and Levi Lelis and Jose Nelson Amaral},
+  booktitle = {Annual International Conference on Computer Science and Software Engineering},
+  year      = {2015},
+}</pre></div>
 
               <p>
               <b><a href="papers/2015/paudelLA15.pdf">Stratified Sampling for Even Workload Partitioning Applied to IDA* and Delaunay Algorithms.</a></b>
               <br>
               Jeeva Paudel, Levi Lelis, and Jose Nelson Amaral.
               <br>
-              In the Proceedings of the International Parallel & Distributed Processing Symposium (IPDPS), 2015.
+              In the Proceedings of the International Parallel &amp; Distributed Processing Symposium (IPDPS), 2015.
               <br>
-<!--               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-paudelLA15'); return false;">[bibtex]</a>
+              <div id="bib-paudelLA15" class="bib-block" style="display:none;"><pre>@inproceedings{paudelLA15,
+  title     = {Stratified Sampling for Even Workload Partitioning Applied to IDA* and Delaunay Algorithms},
+  author    = {Jeeva Paudel and Levi Lelis and Jose Nelson Amaral},
+  booktitle = {International Parallel and Distributed Processing Symposium},
+  year      = {2015},
+}</pre></div>
 
-              <p>
-              <h3 class="tm-text-secondary tm-mb-0">
-                2014
-              </h3> -->
               <p>
               <b><a href="papers/2014/lelisSFZH14.pdf">Predicting optimal solution cost with conditional probabilities.</a></b>
               <br>
@@ -548,6 +942,14 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               Annals of Mathematics and Artificial Intelligence, 2014.
               <br>
               <b><a href=http://link.springer.com/article/10.1007/s10472-014-9432-8>[publisher's website for this paper]</a></b>.
+              <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelisSFZH14'); return false;">[bibtex]</a>
+              <div id="bib-lelisSFZH14" class="bib-block" style="display:none;"><pre>@article{lelisSFZH14,
+  title   = {Predicting optimal solution cost with conditional probabilities},
+  author  = {Levi H. S. Lelis and Roni Stern and Ariel Felner and Sandra Zilles and Robert C. Holte},
+  journal = {Annals of Mathematics and Artificial Intelligence},
+  year    = {2014},
+}</pre></div>
 
               <p>
               <b><a href="papers/2014/lelisSS14.pdf">Estimating Search Tree Size with Duplicate Detection.</a></b>
@@ -556,6 +958,13 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Symposium on Combinatorial Search (SoCS), 2014.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelisSS14'); return false;">[bibtex]</a>
+              <div id="bib-lelisSS14" class="bib-block" style="display:none;"><pre>@inproceedings{lelisSS14,
+  title     = {Estimating Search Tree Size with Duplicate Detection},
+  author    = {Levi H. S. Lelis and Roni Stern and Nathan Sturtevant},
+  booktitle = {Symposium on Combinatorial Search},
+  year      = {2014},
+}</pre></div>
 
               <p>
               <b><a href="papers/2014/lelisOD14.pdf">Memory-Efficient Tree Size Prediction for Depth-First Search in Graphical Models.</a></b>
@@ -564,12 +973,13 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the International Conference on Principles and Practice of Constraint Programming (CP), 2014.
               <br>
-<!--               <br>
-
-              <p>
-              <h3 class="tm-text-secondary tm-mb-0">
-                2013
-              </h3> -->
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelisOD14'); return false;">[bibtex]</a>
+              <div id="bib-lelisOD14" class="bib-block" style="display:none;"><pre>@inproceedings{lelisOD14,
+  title     = {Memory-Efficient Tree Size Prediction for Depth-First Search in Graphical Models},
+  author    = {Levi H. S. Lelis and Lars Otten and Rina Dechter},
+  booktitle = {International Conference on Principles and Practice of Constraint Programming},
+  year      = {2014},
+}</pre></div>
 
               <p>
               <b><a href="papers/2013/Cluster-and-Conquer-thesis.pdf">Cluster-and-Conquer: a Paradigm for Solving State-Space Problems.</a></b>
@@ -578,6 +988,13 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               PhD Dissertation, University of Alberta, 2013.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelis13phd'); return false;">[bibtex]</a>
+              <div id="bib-lelis13phd" class="bib-block" style="display:none;"><pre>@phdthesis{lelis13phd,
+  title  = {Cluster-and-Conquer: a Paradigm for Solving State-Space Problems},
+  author = {Levi H. S. Lelis},
+  school = {University of Alberta},
+  year   = {2013},
+}</pre></div>
 
               <p>
               <b><a href="papers/2013/lelis13.pdf">Active Stratified Sampling with Clustering-Based Type Systems for Predicting the Search Tree Size of Problems with Real-Valued Heuristics.</a></b>
@@ -586,6 +1003,13 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Symposium on Combinatorial Search (SoCS), 2013.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelis13'); return false;">[bibtex]</a>
+              <div id="bib-lelis13" class="bib-block" style="display:none;"><pre>@inproceedings{lelis13,
+  title     = {Active Stratified Sampling with Clustering-Based Type Systems for Predicting the Search Tree Size of Problems with Real-Valued Heuristics},
+  author    = {Levi H. S. Lelis},
+  booktitle = {Symposium on Combinatorial Search},
+  year      = {2013},
+}</pre></div>
 
               <p>
               <b><a href="papers/2013/lelisOD13.pdf">Predicting the Size of Depth-First Branch and Bound Search Trees.</a></b>
@@ -594,6 +1018,13 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI) 2013.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelisOD13'); return false;">[bibtex]</a>
+              <div id="bib-lelisOD13" class="bib-block" style="display:none;"><pre>@inproceedings{lelisOD13,
+  title     = {Predicting the Size of Depth-First Branch and Bound Search Trees},
+  author    = {Levi H. S. Lelis and Lars Otten and Rina Dechter},
+  booktitle = {International Joint Conference on Artificial Intelligence},
+  year      = {2013},
+}</pre></div>
 
               <p>
               <b><a href="papers/2013/ARTINT2694.pdf">Predicting the Size of IDA*'s Search Tree.</a></b>
@@ -602,6 +1033,13 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               Artificial Intelligence, 2013.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelisZH13ai'); return false;">[bibtex]</a>
+              <div id="bib-lelisZH13ai" class="bib-block" style="display:none;"><pre>@article{lelisZH13ai,
+  title   = {Predicting the Size of IDA*'s Search Tree},
+  author  = {Levi H. S. Lelis and Sandra Zilles and Robert C. Holte},
+  journal = {Artificial Intelligence},
+  year    = {2013},
+}</pre></div>
 
               <p>
               <b><a href="papers/2013/lelisZH13.pdf">Stratified Tree Search: A Novel Suboptimal Heuristic Search Algorithm.</a></b>
@@ -610,12 +1048,13 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Conference on Autonomous Agents and Multiagent Systems (AAMAS) 2013.
               <br>
-<!--               <br>
-
-              <p>
-              <h3 class="tm-text-secondary tm-mb-0">
-                2012
-              </h3> -->
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelisZH13'); return false;">[bibtex]</a>
+              <div id="bib-lelisZH13" class="bib-block" style="display:none;"><pre>@inproceedings{lelisZH13,
+  title     = {Stratified Tree Search: A Novel Suboptimal Heuristic Search Algorithm},
+  author    = {Levi H. S. Lelis and Sandra Zilles and Robert C. Holte},
+  booktitle = {International Conference on Autonomous Agents and Multi-Agent Systems},
+  year      = {2013},
+}</pre></div>
 
               <p>
               <b><a href="papers/2012/lelisZH12.pdf">Fast and Accurate Predictions of IDA*'s Performance.</a></b>
@@ -625,6 +1064,13 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               In the Proceedings of the Conference on Artificial
               Intelligence (AAAI) 2012.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelisZH12'); return false;">[bibtex]</a>
+              <div id="bib-lelisZH12" class="bib-block" style="display:none;"><pre>@inproceedings{lelisZH12,
+  title     = {Fast and Accurate Predictions of IDA*'s Performance},
+  author    = {Levi H. S. Lelis and Sandra Zilles and Robert C. Holte},
+  booktitle = {AAAI Conference on Artificial Intelligence},
+  year      = {2012},
+}</pre></div>
 
               <p>
               <b><a href="papers/2012/lelisSFZH12.pdf">Predicting Optimal Solution Cost with Bidirectional Stratified Sampling.</a></b>
@@ -633,6 +1079,13 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the International Conference on Automated Planning and Scheduling (ICAPS) 2012.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelisSFZH12'); return false;">[bibtex]</a>
+              <div id="bib-lelisSFZH12" class="bib-block" style="display:none;"><pre>@inproceedings{lelisSFZH12,
+  title     = {Predicting Optimal Solution Cost with Bidirectional Stratified Sampling},
+  author    = {Levi H. S. Lelis and Roni Stern and Ariel Felner and Sandra Zilles and Robert C. Holte},
+  booktitle = {International Conference on Automated Planning and Scheduling},
+  year      = {2012},
+}</pre></div>
 
               <p>
               <b><a href="papers/2012/lelisJAZH12.pdf">Learning Heuristic Functions Faster by Using Predicted Solution Costs.</a></b>
@@ -641,6 +1094,13 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Symposium on Combinatorial Search (SoCS), 2012.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelisJAZH12'); return false;">[bibtex]</a>
+              <div id="bib-lelisJAZH12" class="bib-block" style="display:none;"><pre>@inproceedings{lelisJAZH12,
+  title     = {Learning Heuristic Functions Faster by Using Predicted Solution Costs},
+  author    = {Levi H. S. Lelis and Shahab Jabbari Arfaee and Sandra Zilles and Robert C. Holte},
+  booktitle = {Symposium on Combinatorial Search},
+  year      = {2012},
+}</pre></div>
 
               <p>
               <b><a href="papers/2012/thayerSL12.pdf">Are We There Yet? -- Estimating Search Progress.</a></b>
@@ -649,12 +1109,13 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Symposium on Combinatorial Search (SoCS), 2012.
               <br>
-<!--               <br>
-
-              <p>
-              <h3 class="tm-text-secondary tm-mb-0">
-                2011
-              </h3> -->
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-thayerSL12'); return false;">[bibtex]</a>
+              <div id="bib-thayerSL12" class="bib-block" style="display:none;"><pre>@inproceedings{thayerSL12,
+  title     = {Are We There Yet? --- Estimating Search Progress},
+  author    = {Jordan Thayer and Roni Stern and Levi H. S. Lelis},
+  booktitle = {Symposium on Combinatorial Search},
+  year      = {2012},
+}</pre></div>
 
               <p>
               <b><a href="papers/2011/lelisSJA11.pdf">Predicting Solution Cost with Conditional Probabilities.</a></b>
@@ -663,6 +1124,13 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Symposium on Combinatorial Search (SoCS), 2011.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelisSJA11'); return false;">[bibtex]</a>
+              <div id="bib-lelisSJA11" class="bib-block" style="display:none;"><pre>@inproceedings{lelisSJA11,
+  title     = {Predicting Solution Cost with Conditional Probabilities},
+  author    = {Levi H. S. Lelis and Roni Stern and Shahab Jabbari Arfaee},
+  booktitle = {Symposium on Combinatorial Search},
+  year      = {2011},
+}</pre></div>
 
               <p>
               <b><a href="papers/2011/lelisZH11socs.pdf">Improved Prediction of IDA*'s Performance via e-Truncation.</a></b>
@@ -671,6 +1139,13 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In the Proceedings of the Symposium on Combinatorial Search (SoCS), 2011.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelisZH11socs'); return false;">[bibtex]</a>
+              <div id="bib-lelisZH11socs" class="bib-block" style="display:none;"><pre>@inproceedings{lelisZH11socs,
+  title     = {Improved Prediction of IDA*'s Performance via e-Truncation},
+  author    = {Levi H. S. Lelis and Sandra Zilles and Robert C. Holte},
+  booktitle = {Symposium on Combinatorial Search},
+  year      = {2011},
+}</pre></div>
 
               <p>
               <b><a href="papers/2011/lelisZH11aaai.pdf">Time Complexity of Iterative-Deepening A*: The Informativeness Pathology (Abstract).</a></b>
@@ -679,12 +1154,13 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               <br>
               In AAAI Student Abstract and Poster Section 2011.
               <br>
-<!--               <br>
-
-              <p>
-              <h3 class="tm-text-secondary tm-mb-0">
-                2009
-              </h3> -->
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelisZH11aaai'); return false;">[bibtex]</a>
+              <div id="bib-lelisZH11aaai" class="bib-block" style="display:none;"><pre>@inproceedings{lelisZH11aaai,
+  title     = {Time Complexity of Iterative-Deepening A*: The Informativeness Pathology},
+  author    = {Levi H. S. Lelis and Sandra Zilles and Robert C. Holte},
+  booktitle = {AAAI Conference on Artificial Intelligence},
+  year      = {2011},
+}</pre></div>
 
               <p>
               <b><a href="papers/2009/lelisS09.pdf">Semi-supervised density-based clustering.</a></b>
@@ -694,6 +1170,13 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
               In the IEEE Proceedings of the International Conference of Data Mining (ICDM)
               2009.
               <br>
+              <a href="#" class="bib-toggle" onclick="toggleBib('bib-lelisS09'); return false;">[bibtex]</a>
+              <div id="bib-lelisS09" class="bib-block" style="display:none;"><pre>@inproceedings{lelisS09,
+  title     = {Semi-supervised density-based clustering},
+  author    = {Levi H. S. Lelis and Joerg Sander},
+  booktitle = {IEEE International Conference on Data Mining},
+  year      = {2009},
+}</pre></div>
 
             </div>
           </div>
@@ -703,5 +1186,33 @@ Teaching People by Justifying Tree Search Decisions: An Empirical Study in Curli
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      function toggleBib(id) {
+        var el = document.getElementById(id);
+        el.style.display = el.style.display === 'none' ? 'block' : 'none';
+      }
+
+      document.querySelectorAll('.bib-block').forEach(function(block) {
+        var pre = block.querySelector('pre');
+        var btn = document.createElement('button');
+        btn.className = 'bib-copy-btn';
+        btn.title = 'Copy to clipboard';
+        btn.innerHTML = '<i class="far fa-copy"></i>';
+        btn.addEventListener('click', function() {
+          navigator.clipboard.writeText(pre.textContent.trim()).then(function() {
+            btn.innerHTML = '<i class="fas fa-check"></i>';
+            setTimeout(function() { btn.innerHTML = '<i class="far fa-copy"></i>'; }, 1500);
+          });
+        });
+        block.appendChild(btn);
+      });
+
+      (function() {
+        var page = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(function(a) {
+          if (a.getAttribute('href') === page) a.style.fontWeight = '700';
+        });
+      })();
+    </script>
   </body>
 </html>

@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Levi Lelis - UAlberta</title>
+    <title>Levi Lelis - People</title>
+    <meta name="description" content="Research group of Levi H. S. Lelis at the University of Alberta." />
+    <link rel="icon" href="img/UA-COLOUR.png" type="image/png" />
 <!--
 Next Level CSS Template
 https://templatemo.com/tm-532-next-level
@@ -13,20 +15,28 @@ https://templatemo.com/tm-532-next-level
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/templatemo-style.css" />
+    <style>
+      .tm-nav-col { justify-content: flex-start; padding-left: 0; }
+      .tm-navbar { padding-left: 10px; }
+      .navbar-nav .nav-item:first-child .nav-link { margin-left: 0; }
+      .people-list { list-style: none; padding-left: 0; margin-bottom: 0.5rem; }
+      .people-list li { padding: 2px 0; }
+      .people-cols { columns: 2; column-gap: 2rem; }
+      .people-cols li { break-inside: avoid; }
+      .people-section-divider { margin: 1.5rem 0; }
+    </style>
   </head>
   <body>
 <div class="container-fluid">
         <div class="col-11 tm-page-cols-container">
           <div class="tm-page-col-left">
             <div class="col-lg-10 col-10">
+              <img src="img/UA-COLOUR.png" class="img-fluid" alt="University of Alberta"/>
             </div>
           </div>
 
         <div class="tm-page-col-right">
           <div class="col-lg-12 col-2 tm-nav-col">
-          <div class="col-lg-3 col-20">
-          <img src="img/UA-COLOUR.png" class="img-fluid"/>
-        </div>
           <div class="tm-nav">
             <nav class="navbar navbar-expand-lg navbar-light tm-navbar">
               <button
@@ -39,12 +49,11 @@ https://templatemo.com/tm-532-next-level
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto mr-0">
+              <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
                     <div class="tm-nav-link-highlight"></div>
                     <a class="nav-link" href="index.html">Home</a>
-                  </li>
                   </li>
                   <li class="nav-item active">
                     <div class="tm-nav-link-highlight"></div>
@@ -52,12 +61,15 @@ https://templatemo.com/tm-532-next-level
                   </li>
                   <li class="nav-item active">
                     <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="people.html">People</a>
+                  </li>
+                  <li class="nav-item active">
+                    <div class="tm-nav-link-highlight"></div>
                     <a class="nav-link" href="research.html">Research</a>
                   </li>
                   <li class="nav-item active">
                     <div class="tm-nav-link-highlight"></div>
-                    <a class="nav-link" href="people.html"
-                    >People<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="talks.html">Talks</a>
                   </li>
                 </ul>
               </div>
@@ -80,130 +92,102 @@ https://templatemo.com/tm-532-next-level
               Current Students and Research Associates
             </h4>
             <br>
-              <b>PhD Students</b>
-              <br>
-              <a href="https://tuero.github.io/">Jake Tuero</a>
-              <br>
-              David Aleixo
-              <br>
-              <a href="https://kiarashk76.github.io/">Kiarash Aghakasiri</a>
-              <br>
-              <a href="https://sasnauskas.net/">Paulius Sasnauskas</a>
-              <br>
-              Sai Shashank Gunuputi Penchala
-              <br><br>
-              <b>MSc Students</b>
-              <br>
-              Paul Saunders
-              <br>
-              Reza Abdollahzadeh
-              <br>
-              Avani Tiwari
-              <br>
-              Hamid Reza Dehbashi
-              <br>
-              Shasta Johnsen-Sollos
-              <br>
-              Armin Ashrafi
-              <br>
-              Daniel Zhang
-              <br>
-              Pedro Henrique Gomes Mapa da Silva
-              <br>
-              Yanze Song
-            <br><br>
+            <b>PhD Students</b>
+            <ul class="people-list">
+              <li><a href="https://tuero.github.io/">Jake Tuero</a></li>
+              <li>David Aleixo</li>
+              <li><a href="https://kiarashk76.github.io/">Kiarash Aghakasiri</a></li>
+              <li><a href="https://sasnauskas.net/">Paulius Sasnauskas</a></li>
+              <li>Sai Shashank Gunuputi Penchala</li>
+            </ul>
+            <b>MSc Students</b>
+            <ul class="people-list">
+              <li>Paul Saunders</li>
+              <li>Reza Abdollahzadeh</li>
+              <li>Avani Tiwari</li>
+              <li>Hamid Reza Dehbashi</li>
+              <li>Shasta Johnsen-Sollos</li>
+              <li>Armin Ashrafi</li>
+              <li>Daniel Zhang</li>
+              <li>Pedro Henrique Gomes Mapa da Silva</li>
+              <li>Yanze Song</li>
+            </ul>
+
+            <hr class="people-section-divider">
+
             <h4 class="tm-text-secondary tm-mb-0">
               Former Students and Research Associates
             </h4>
-
+            <br>
             <b>Postdoctoral Fellows</b>
-            <p>
-            <a href="https://pure.royalholloway.ac.uk/portal/en/persons/santiago-franco-aixela(89198cb5-d0db-4a38-9cb5-0553f7c9fd6a).html">Santiago Franco</a>
-            <br>
-            <a href="http://lucasnferreira.com/">Lucas N. Ferreira</a>
-            <br>
-              <a href="https://ca.linkedin.com/in/elham-parhizkar-552a4565">Elham Parhizkar</a>
-            <br>
-            <p><p>
+            <ul class="people-list">
+              <li><a href="https://pure.royalholloway.ac.uk/portal/en/persons/santiago-franco-aixela(89198cb5-d0db-4a38-9cb5-0553f7c9fd6a).html">Santiago Franco</a></li>
+              <li><a href="https://lucasnferreira.com/">Lucas N. Ferreira</a></li>
+              <li><a href="https://ca.linkedin.com/in/elham-parhizkar-552a4565">Elham Parhizkar</a></li>
+            </ul>
 
             <b>PhD Students</b>
-            <br>
-            <a href="https://www.zfahmad.com/">Zaheen Ahmad</a>
-            <br>
-              <a href="https://rubensoliveiramoraes.wordpress.com/">Rubens Moraes</a>
-            <br>
-            <a href="https://sites.google.com/site/julianrmarino/">Julian Mariño</a>
-            <p><p>
+            <ul class="people-list">
+              <li><a href="https://www.zfahmad.com/">Zaheen Ahmad</a></li>
+              <li><a href="https://rubensoliveiramoraes.wordpress.com/">Rubens Moraes</a></li>
+              <li><a href="https://sites.google.com/site/julianrmarino/">Julian Mariño</a></li>
+            </ul>
 
             <b>MSc Students</b>
-            <br>
-            Parnian Behdin
-            <br>
-            Amirhossein Rajabpour
-            <br>
-            Mahdieh Mallahnezhad
-            <br>
-            Kenneth Tjhia
-            <br>
-            Quazi Asif Sadmine
-            <br>
-            Tales Carvalho
-            <br>
-            Mahdi Alikhasi
-            <br>
-            Zahra Bashir
-            <br>
-            Thirupathi Reddy
-            <br>
-            Habib Rahman
-            <br>
-              David Aleixo
-            <br>
-              Fatemeh Abdollahi
-            <br>
-              Saqib Ameen
-            <br>
-              Spyros Orfanos
-            <br>
-              João Nova
-            <br>
-              Leandro Couto
-            <br>
-              Lucas Pereira
-            <br>
-            <a href="https://scholar.google.com/citations?user=zMhSiocAAAAJ">Willian Magno Pereira Reis</a>
-            <br>
-            <a href="https://sites.google.com/site/julianrmarino/">Julian Mariño</a>
-            <br>
-            <a href="https://pe.linkedin.com/in/marvin-abisrror">Marvin Abisrror Zarate</a>
-            <br>
-            <a href="https://scholar.google.com/citations?user=jUYau7sAAAAJ&hl=en">Rafael Padovani</a>
-            <br>
-            Cesar Ruben Francisco Gennaro Campos
-            <br>
-            <a href="https://rubensoliveiramoraes.wordpress.com/">Rubens Moraes</a>
-            <br>
-            Damaris Bento
-            <br>
-            <a href="https://scholar.google.com/citations?user=mUYv2moAAAAJ&hl=en">Cleyton Rodrigo da Silva</a>
-            <br>
-            <br>
+            <ul class="people-list people-cols">
+              <li>Parnian Behdin</li>
+              <li>Amirhossein Rajabpour</li>
+              <li>Mahdieh Mallahnezhad</li>
+              <li>Kenneth Tjhia</li>
+              <li>Quazi Asif Sadmine</li>
+              <li>Tales Carvalho</li>
+              <li>Mahdi Alikhasi</li>
+              <li>Zahra Bashir</li>
+              <li>Thirupathi Reddy</li>
+              <li>Habib Rahman</li>
+              <li>David Aleixo</li>
+              <li>Fatemeh Abdollahi</li>
+              <li>Saqib Ameen</li>
+              <li>Spyros Orfanos</li>
+              <li>João Nova</li>
+              <li>Leandro Couto</li>
+              <li>Lucas Pereira</li>
+              <li><a href="https://scholar.google.com/citations?user=zMhSiocAAAAJ">Willian Magno Pereira Reis</a></li>
+              <li><a href="https://sites.google.com/site/julianrmarino/">Julian Mariño</a></li>
+              <li><a href="https://pe.linkedin.com/in/marvin-abisrror">Marvin Abisrror Zarate</a></li>
+              <li><a href="https://scholar.google.com/citations?user=jUYau7sAAAAJ&hl=en">Rafael Padovani</a></li>
+              <li>Cesar Ruben Francisco Gennaro Campos</li>
+              <li><a href="https://rubensoliveiramoraes.wordpress.com/">Rubens Moraes</a></li>
+              <li>Damaris Bento</li>
+              <li><a href="https://scholar.google.com/citations?user=mUYv2moAAAAJ&hl=en">Cleyton Rodrigo da Silva</a></li>
+            </ul>
+
             <b>Undergraduate Students</b>
-            <br>
-            Cleyton Rodrigo da Silva, Matheus Maresso Alves Lima, Lucas Pereira, Joao Marcos Gusmao Teixeira, Walter de Oliveira Sa, Matheus Phillipe Velozo Amaral, Guttardo Neri Pereira, Matheus Ferreira, Simon Chen, Tassiana Oliveira, Yuxi Chen, Olivier Vadiavaloo, Lyuyang Wang,
-Shway Wang, Kelsey Pattison.
-            <br>
-            <br>
+            <ul class="people-list people-cols">
+              <li>Cleyton Rodrigo da Silva</li>
+              <li>Matheus Maresso Alves Lima</li>
+              <li>Lucas Pereira</li>
+              <li>Joao Marcos Gusmao Teixeira</li>
+              <li>Walter de Oliveira Sa</li>
+              <li>Matheus Phillipe Velozo Amaral</li>
+              <li>Guttardo Neri Pereira</li>
+              <li>Matheus Ferreira</li>
+              <li>Simon Chen</li>
+              <li>Tassiana Oliveira</li>
+              <li>Yuxi Chen</li>
+              <li>Olivier Vadiavaloo</li>
+              <li>Lyuyang Wang</li>
+              <li>Shway Wang</li>
+              <li>Kelsey Pattison</li>
+            </ul>
+
             <b>Visiting PhD Students</b>
-            <br>
-            Elia Piccoli (University of Piza)
-            <br>
-            Matthew Macfarlene (University of Amsterdam)
-            <br>
-            Sumedh Pendurkar (Texas A&M University)
-            <br>
-            Ronaldo e Silva Vieira (Universidade Federal de Minas Gerais)
-            <br>
+            <ul class="people-list">
+              <li>Elia Piccoli (University of Piza)</li>
+              <li>Matthew Macfarlene (University of Amsterdam)</li>
+              <li>Sumedh Pendurkar (Texas A&M University)</li>
+              <li>Ronaldo e Silva Vieira (Universidade Federal de Minas Gerais)</li>
+            </ul>
             </div>
           </div>
         </div>
@@ -212,5 +196,13 @@ Shway Wang, Kelsey Pattison.
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function() {
+        var page = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(function(a) {
+          if (a.getAttribute('href') === page) a.style.fontWeight = '700';
+        });
+      })();
+    </script>
   </body>
 </html>

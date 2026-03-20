@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Levi Lelis - UAlberta</title>
+    <title>Levi Lelis - Research</title>
+    <meta name="description" content="Research overview of Levi H. S. Lelis, Associate Professor at the University of Alberta." />
+    <link rel="icon" href="img/UA-COLOUR.png" type="image/png" />
 <!--
 Next Level CSS Template
 https://templatemo.com/tm-532-next-level
@@ -13,20 +15,23 @@ https://templatemo.com/tm-532-next-level
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/templatemo-style.css" />
+    <style>
+      .tm-nav-col { justify-content: flex-start; padding-left: 0; }
+      .tm-navbar { padding-left: 10px; }
+      .navbar-nav .nav-item:first-child .nav-link { margin-left: 0; }
+    </style>
   </head>
   <body>
     <div class="container-fluid">
         <div class="col-11 tm-page-cols-container">
           <div class="tm-page-col-left">
             <div class="col-lg-10 col-10">
+              <img src="img/UA-COLOUR.png" class="img-fluid" alt="University of Alberta"/>
             </div>
           </div>
-        
+
         <div class="tm-page-col-right">
           <div class="col-lg-12 col-2 tm-nav-col">
-          <div class="col-lg-3 col-20">
-          <img src="img/UA-COLOUR.png" class="img-fluid"/>
-        </div>
           <div class="tm-nav">
             <nav class="navbar navbar-expand-lg navbar-light tm-navbar">
               <button
@@ -39,12 +44,11 @@ https://templatemo.com/tm-532-next-level
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto mr-0">
+              <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
                     <div class="tm-nav-link-highlight"></div>
                     <a class="nav-link" href="index.html">Home</a>
-                  </li>
                   </li>
                   <li class="nav-item active">
                     <div class="tm-nav-link-highlight"></div>
@@ -52,12 +56,15 @@ https://templatemo.com/tm-532-next-level
                   </li>
                   <li class="nav-item active">
                     <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="people.html">People</a>
+                  </li>
+                  <li class="nav-item active">
+                    <div class="tm-nav-link-highlight"></div>
                     <a class="nav-link" href="research.html">Research</a>
                   </li>
                   <li class="nav-item active">
                     <div class="tm-nav-link-highlight"></div>
-                    <a class="nav-link" href="people.html"
-                    >People<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="talks.html">Talks</a>
                   </li>
                 </ul>
               </div>
@@ -93,6 +100,7 @@ https://templatemo.com/tm-532-next-level
                 <img
                       src="img/ls2.png"
                       class="img-fluid"
+                      alt="Local search algorithm for programmatic strategies"
                 />
               </div>
               <p class="mb-2">
@@ -110,14 +118,13 @@ https://templatemo.com/tm-532-next-level
               <p class="mb-2">
                 We developed a population-based search algorithm for synthesizing a set of programmatic strategies to induce action abstractions for aiding a real-time planner (see <a href="papers/2019/marinoMTL19.pdf">paper</a>). Our system synthesizes a set of complementary programmatic strategies, which are used to induce action abstractions by allowing a planner to consider during search only the actions returned by one of the strategies. 
               </p>
-              <center>
               <div class="col-lg-7 col-10">
                 <img
                       src="img/micro-rts.png"
                       class="img-fluid"
+                      alt="MicroRTS game screenshot"
                 />
               </div>
-              </center>
               <p class="mb-2">
                 A system that combines action abstractions induced by programmatic strategies with a <a href="papers/2018/moraesMLN18.pdf">search algorithm that "pays attention"</a> to different aspects of the game won the 2018 <a href="https://sites.google.com/site/micrortsaicompetition/home">IEEE MicroRTS competition</a>.
               </p>
@@ -149,14 +156,13 @@ https://templatemo.com/tm-532-next-level
               <p class="mb-2">
                 In my early research days I worked on algorithms for estimating the running time of tree search algorithms. Knuth, in 1975, and his PhD student, Chen, in 1992, presented different methods for estimating the running time of backtracking algorithms. In my PhD I developed algorithms for estimating the running time of the heuristic search algorithms <a href="papers/2013/ARTINT2694.pdf">IDA*</a>, <a href="papers/2014/lelisSS14.pdf">A*</a> and <a href="papers/2014/lelisOD14.pdf">Branch and Bound</a> algorithms. The algorithms for predicting the running time of Branch and Bound procedures represent the solution to a problem posed by D. Knuth in his seminal 1975 paper. Our prediction algorithms are being used in <a href="papers/2017/francoTLB17.pdf">planners</a> and in parallel systems as a means of dividing the <a href="papers/2015/paudelLA15.pdf">computational workload amongst multiple CPUs</a>.
               </p>
-              <center>
               <div class="col-lg-7 col-10">
                 <img
                       src="img/biss.png"
                       class="img-fluid"
+                      alt="BiSS bidirectional stratified sampling illustration"
                 />
               </div>
-              </center>
               <p class="mb-2">
                 The ideas used to estimate the running time of heuristic search algorithms can also be used to estimate the optimal solution cost of combinatorial search problems. <a href="papers/2016/lelisSJAZFH16.pdf">BiSS</a> is a bidirectional sampling algorithm that produces accurate estimates of the solution cost for several classic heuristic search domains such as the sliding-tile puzzle and Rubik's cube. One interesting application of BiSS is to generate training data to induce a neural network that can be used as a heuristic function to guide heuristic search algorithms. BiSS reduced the time required by previous state­-of-­the-­art algorithms to learn heuristic functions from days to hours.
               </p>
@@ -168,5 +174,13 @@ https://templatemo.com/tm-532-next-level
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function() {
+        var page = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(function(a) {
+          if (a.getAttribute('href') === page) a.style.fontWeight = '700';
+        });
+      })();
+    </script>
   </body>
 </html>
