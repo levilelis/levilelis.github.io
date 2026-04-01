@@ -221,6 +221,8 @@ ul {
   #navbarNav {
     position: absolute;
     top: 52px;
+    right: 0;
+    min-width: 160px;
     padding-top: 5px;
     padding-bottom: 5px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -288,6 +290,14 @@ ul.tm-list-plus li:before {
   font-size: 1.3rem;
   margin-bottom: 0;
   text-align: right;
+}
+
+@media (max-width: 991px) {
+  .tm-profile-photo {
+    max-width: 260px;
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 991px) {
