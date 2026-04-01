@@ -664,6 +664,7 @@ figure.effect-bubba:hover p {
     margin-right: auto;
   }
   .tm-gallery-item { width: 46%; }
+  .tm-home-section-2-right .tm-gallery-item { width: 44%; }
 
   .filters-button-group {
     padding-right: 0;
