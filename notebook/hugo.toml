@@ -1,0 +1,26 @@
+baseURL = "https://levilelis.github.io/notebook/"
+locale = "en-us"
+title = "Research Notebook"
+
+[params]
+  siteRoot     = "https://levilelis.github.io"
+  author       = "Levi H. S. Lelis"
+  description  = "Research Notebook."
+  mathjax      = true
+  mainSections = ["posts"]
+
+[taxonomies]
+  tag = "tags"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+      [markup.goldmark.extensions.passthrough.delimiters]
+        inline = [['$', '$'], ['\(', '\)']]
+        block  = [['$$', '$$'], ['\[', '\]']]
+  [markup.highlight]
+    style = "github"
+    lineNos = false

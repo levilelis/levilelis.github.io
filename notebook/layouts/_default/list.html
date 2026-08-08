@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+{{ if .IsHome }}
+  <h2 class="tm-text-secondary tm-mb-4">Research Notebook</h2>
+  {{ $pages := where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
+  {{ range $pages.GroupByDate "2006" }}
+    <h3 class="notebook-year">{{ .Key }}</h3>
+    {{ range .Pages }}
+      {{ partial "post-summary.html" . }}
+    {{ end }}
+  {{ end }}
+{{ else if .Data.Term }}
+  <h2 class="tm-text-secondary tm-mb-2">Posts tagged "{{ .Data.Term }}"</h2>
+  <p class="tm-mb-4"><a href="{{ $.Site.BaseURL }}" class="blog-back-link">← All posts</a></p>
+  {{ range .Pages.ByDate.Reverse }}
+    {{ partial "post-summary.html" . }}
+  {{ end }}
+{{ else }}
+  <h2 class="tm-text-secondary tm-mb-2">{{ .Title }}</h2>
+  {{ range .Pages.ByDate.Reverse }}
+    {{ partial "post-summary.html" . }}
+  {{ end }}
+{{ end }}
+
+{{ end }}

@@ -1,0 +1,58 @@
+---
+title: "Learning at Two Timescales"
+subtitle: ""
+date: 2026-07-20
+draft: false
+tags: [Machine Learning, Artificial Intelligence]
+description: "A brief description of my research interests as of 2026."
+---
+
+Current artificial agents require large amounts of data to learn to solve problems, and their solutions often fail to generalize to problems not seen during training. These weaknesses contrast with the learning abilities of animals, which can acquire complex skills that generalize to different scenarios from little experience. Animals are efficient learners in part because they rely on representations and learning mechanisms shaped by evolution, a process that is slow and computationally expensive. Our research attempts to close the gap between natural and artificial agents by studying how agents can learn representations that make future problems easier to solve. If the computational cost of intelligence is high and unavoidable, we can invest much of that computation in learning a reusable representation. Its cost can then be amortized across the many downstream problems that the representation makes easier to solve.
+
+{{< pullquote >}}
+We study intelligence as learning at two timescales: a slow process that builds the representation and a fast process that searches within it.
+{{< /pullquote >}}
+
+The shortcomings of artificial agents arise partly from limitations in the representations they use: the symbols and structures available for describing a solution in the computer’s memory. Neural networks, for example, are flexible function approximators. However, unless their architecture and training process provide the right inductive biases, this flexibility can require large amounts of data and encourage statistical shortcuts rather than algorithmic solutions that generalize to unseen data. A network trained naively on samples from $\sin(x)$ over a bounded interval may interpolate accurately within that interval but generalize poorly to values of $x$ outside it.
+
+We approach the learning problem through a program synthesis lens, where a programming language defines the agent's representation space. In this framing, learning is equivalent to searching for a program that can be written in the language, and learning a representation is equivalent to learning the language itself. In the sine example, we are interested in finding representations that encode programs that approximate $\sin(x)$ by computing as many iterations as needed of the Taylor expansion. This solution provably generalizes to any input $x$, including values outside those observed in training. 
+
+The choice of language not only enables solutions that provably generalize but also allows agents to learn from few examples. Consider FlashFill {{< cite flashfill >}}, a system that allows people with little computing expertise to solve spreadsheet problems by providing a few input-output examples. In terms of the number of samples used and the ability to generalize within its domain, FlashFill’s effectiveness is analogous to the efficient learning observed in animals. Its learning ability is rooted in two components. First, the language used to define its solution space; in the case of FlashFill, a handcrafted language that constrains the space of solutions to those needed in practice. Second, a clever search algorithm that can operate in the space defined by the language. In our group, we are interested in developing algorithms that can learn their own programming language, so they can become efficient learners of a given problem class, as FlashFill is efficient at solving string manipulation problems.
+
+I started this note by pointing out that current artificial agents require large amounts of data to learn, as if I were going to tell you how we are working to solve this problem. Sorry to disappoint, but I am not sure there is a solution to this problem. It is inevitable that learning in general will be computationally intensive. This is because some of the problems we are interested in solving are computationally hard and we can't miraculously come up with solutions. If learning is inevitably inefficient, what are we even doing then? It turns out that the time spent on computation is important, so the learning cost can be amortized. If an expensive learned language is used by many agents or across many downstream problems, its learning cost can be amortized over all those uses. The language can enable efficient learning, but only after we pay the price of learning it.    
+
+The thesis that underlies our work is that agents learn at two timescales: one fast and the other slow. The slow learning process defines the language, as evolution defines the brain of an animal, and as engineers define a language specialized for solving spreadsheet problems, as in FlashFill. The fast process defines the program, written in the language defined by the slow process, which solves a given problem.
+
+## Recent Contributions
+
+I will highlight three contributions from our research group, which follow this concept of learning at two timescales. First, we showed how to learn semantic spaces {{< cite moraesL24 moraesSBL25 >}}, nondeterministic programs through heuristic search algorithms {{< cite orseauLLW18 orseauL21 orseauHL23 tueroBL25 tueroBOL26 >}}, and neural languages and their interpreters {{< cite macfarlaneBHL26 >}}. 
+
+### Learning Symbolic Semantic Spaces
+
+The search landscape induced by a programming language can be unfriendly to search because small syntactic changes to a program may cause large changes in its behavior. Search would be easier if programs that are close to one another in the language space also behaved similarly. We refer to this property as semantic locality.
+
+We devised a method for learning symbolic languages that optimizes for semantic locality. The method learns a library of functions representing different agent behaviors, and constructs novel programs by composing functions from this library. Search therefore occurs in what we call a semantic space: a space organized around meaningful behaviors rather than syntactic modifications {{< cite moraesL24 >}}. In our initial work, the agent learned this semantic space from scratch through experience. In follow-up work, we introduced InnateCoder, a system that extracts an initial semantic space from a language model and improves it through experience {{< cite moraesSBL25 >}}.
+
+This line of work develops algorithms that invest computation in learning a representation that makes future problems easier to solve. One of our benchmarks is the challenging real-time strategy game [MicroRTS](https://github.com/Farama-Foundation/MicroRTS), where we learn programs for playing the game. Different MicroRTS maps require different strategies. Through the learned semantic space, however, knowledge acquired while learning to play on one map can be reused when searching for programs on other maps. Learning the language is costly, but that cost is amortized across many problems.
+
+
+### Learning Nondeterministic Programs
+
+Deterministic programs are the kind of programs we typically study in computing science courses: at each step, they specify exactly which computation to perform next. For example, swapping two values while executing Bubble Sort. A nondeterministic program may instead say “try one of these possible computations”. A search algorithm executes such a program by exploring the alternative computations until one succeeds. Learning to guide search can thus be viewed as learning a clever nondeterministic program that knows where to invest its computation. For example, a program could indicate that a particular computational path is promising while preserving other alternatives for the search to consider. You can watch [this talk](https://www.youtube.com/watch?v=874f23b2oOw), which I gave at Upper Bound 2026, for the details of this argument. In short, developing algorithms that efficiently solve search problems is equivalent to learning a language whose nondeterministic programs make downstream problems easier to solve.
+
+We have developed tree search algorithms, guided by a policy, a probability distribution over the possible computations, that provably minimize the search tree they expand to solve a problem {{< cite orseauLLW18 orseauL21 orseauHL23 tueroBL25 tueroBOL26 >}}. This property is important because it allows us to learn to search while minimizing the computational effort required to solve problems; we can directly optimize for the metric that matters, instead of a proxy, as is done with other algorithms such as A*. The policy we learn implicitly encodes a library of nondeterministic programs that can be used to solve a large number of downstream problems; learning the policy is computationally expensive, but solving downstream problems is not. 
+
+### Learning Neural Languages and Their Interpreters
+
+Neural networks often break down on examples that differ from those seen during training. One reason for this brittleness lies deep within our own field: computation, or too little of it. Current neural models can be effective at perception tasks, such as recognizing images of dogs and cats, but many problems cannot be solved using a fixed number of computational steps, which is independent of the input. When manipulating lists of integers, for example, the number of required steps may grow with the length of the input. A sufficiently large input will eventually cause a model that performs a fixed number of computational steps to produce an incorrect output.
+
+Recently, we introduced a neural architecture, the Neural Language Interpreter, that can adapt its computation at test time to problems unseen during training {{< cite macfarlaneBHL26 >}}. The model learns, end-to-end, a vocabulary of neural symbols that form a language, together with a neural interpreter that executes them. Because execution is differentiable, we can synthesize neural programs at test time by searching the program space with gradient descent. The learned language allows the model to generalize combinatorially to problems requiring more or fewer computational steps than those encountered during training, as well as to novel compositions of learned primitives.
+
+This line of work is another instantiation of learning at two timescales. Learning the language requires many samples, but once learned, the language can be reused to solve many downstream problems. The learned symbols provide reusable computational primitives, while test-time synthesis determines which primitives to compose. This allows the model to solve problems unseen during training from only a handful of labeled examples.
+
+## Summary
+
+Our research studies how agents can invest computation in learning representations that make future problems easier to solve. The cost of learning such a representation is worthwhile if it can be reused across many downstream problems. That is why generalization beyond the training distribution is important in our work. Without it, the learned representation might apply to too few problems for its cost to be amortized. Our work on symbolic semantic spaces, nondeterministic programs, and neural languages explores this idea in different forms. In each case, a slow learning process constructs a reusable language, while a fast process searches within that language for solutions to new problems. 
+
+
+{{< references >}}

@@ -1,0 +1,8 @@
+{{- /* Open links in a new tab. External links also get rel="noopener noreferrer".
+       In-page anchor links (#...) are left as normal same-tab navigation. */ -}}
+{{- $u := urls.Parse .Destination -}}
+{{- $isFragment := strings.HasPrefix .Destination "#" -}}
+{{- $isExternal := and $u.Host (ne $u.Host (urls.Parse site.BaseURL).Host) -}}
+<a href="{{ .Destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}
+  {{- if not $isFragment }} target="_blank"{{ end }}
+  {{- if $isExternal }} rel="noopener noreferrer"{{ end }}>{{ .Text | safeHTML }}</a>

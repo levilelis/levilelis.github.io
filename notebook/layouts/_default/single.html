@@ -1,0 +1,20 @@
+{{ define "main" }}
+<article class="blog-post">
+
+  <header class="tm-mb-3">
+    <h2 class="tm-text-secondary tm-mb-0">{{ .Title }}</h2>
+    {{ with .Params.subtitle }}<p class="blog-subtitle tm-mb-1">{{ . }}</p>{{ end }}
+    <div class="blog-post-meta tm-mb-2">
+      <span class="blog-date">{{ .Date.Format "January 2, 2006" }}</span>
+      {{ range .Params.tags }}
+        <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}/" class="blog-tag">{{ . }}</a>
+      {{ end }}
+    </div>
+  </header>
+
+  <div class="blog-content">
+    {{ .Content }}
+  </div>
+
+</article>
+{{ end }}

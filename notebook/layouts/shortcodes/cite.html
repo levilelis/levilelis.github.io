@@ -1,0 +1,19 @@
+{{- /* Inline citation: {{< cite key >}} or {{< cite key1 key2 >}} */ -}}
+{{- $store := .Page.Store -}}
+{{- $cited := $store.Get "citations" -}}
+{{- if not $cited }}{{ $cited = slice }}{{ end -}}
+{{- $labels := slice -}}
+{{- range .Params -}}
+  {{- $key := . -}}
+  {{- if not (in $cited $key) -}}
+    {{- $cited = $cited | append $key -}}
+    {{- if not (index $.Site.Data.bibliography $key) -}}
+      {{- warnf "cite: no bibliography entry for key %q (page %q)" $key $.Page.Path -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $n := 0 -}}
+  {{- range $i, $k := $cited -}}{{- if eq $k $key -}}{{- $n = (add $i 1) -}}{{- end -}}{{- end -}}
+  {{- $labels = $labels | append (printf `<a href="#ref-%s">%d</a>` $key $n) -}}
+{{- end -}}
+{{- $store.Set "citations" $cited -}}
+{{- printf "[%s]" (delimit $labels ", ") | safeHTML -}}

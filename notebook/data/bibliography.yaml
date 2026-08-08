@@ -1,0 +1,108 @@
+# Bibliography "base" for the notebook.
+# Each top-level key is a citation key, used as {{< cite key >}} in posts.
+# type: article | inproceedings
+#   article:       author, title, journal, volume, pages, year
+#   inproceedings: author, title, booktitle, year
+# Use plain text (no LaTeX braces); page ranges may use "--" (rendered as an en dash).
+
+cybenko1989approximation:
+  type: article
+  author: "George Cybenko"
+  title: "Approximation by superpositions of a sigmoidal function"
+  journal: "Mathematics of Control, Signals and Systems"
+  volume: "2"
+  pages: "303--314"
+  year: "1989"
+
+bartlett1998sample:
+  type: article
+  author: "Peter L. Bartlett"
+  title: "The sample complexity of pattern classification with neural networks: The size of the weights is more important than the size of the network"
+  journal: "IEEE Transactions on Information Theory"
+  volume: "44"
+  pages: "525--536"
+  year: "1998"
+
+flashfill:
+  type: inproceedings
+  author: "Sumit Gulwani"
+  title: "Automating string processing in spreadsheets using input-output examples"
+  booktitle: "Annual ACM Symposium on Principles of Programming Languages"
+  year: "2011"
+
+moraesL24:
+  type: inproceedings
+  author: "Rubens Moraes and Levi H. S. Lelis"
+  title: "Searching for Programmatic Policies in Semantic Spaces"
+  booktitle: "International Joint Conference on Artificial Intelligence"
+  year: "2024"
+
+moraesSBL25:
+  type: inproceedings
+  author: "Rubens Moraes, Quazi Asif Sadmine, Hendrik Baier, and Levi H. S. Lelis"
+  title: "InnateCoder: Learning Programmatic Options with Foundation Models"
+  booktitle: "International Joint Conference on Artificial Intelligence"
+  year: "2025"
+
+tueroBL25:
+  type: inproceedings
+  author: "Jake Tuero, Michael Buro, and Levi H. S. Lelis"
+  title: "Subgoal-Guided Policy Heuristic Search with Learned Subgoals"
+  booktitle: "International Conference on Machine Learning"
+  year: "2025"
+
+tueroBOL26:
+  type: inproceedings
+  author: "Jake Tuero, Michael Buro, Laurent Orseau, and Levi H. S. Lelis"
+  title: "Structure-Induced Information for Rerooting Levin Tree Search"
+  booktitle: "International Conference on Machine Learning"
+  year: "2026"
+
+orseauLLW18:
+  type: inproceedings
+  author: "Laurent Orseau, Levi H. S. Lelis, Tor Lattimore, and Theophane Weber"
+  title: "Single-Agent Policy Tree Search with Guarantees"
+  booktitle: "Conference on Neural Information Processing Systems"
+  year: "2018"
+
+helmertLLOS19:
+  type: inproceedings
+  author: "Malte Helmert, Tor Lattimore, Levi H. S. Lelis, Laurent Orseau, and Nathan Sturtevant"
+  title: "Iterative Budgeted Exponential Search"
+  booktitle: "International Joint Conference on Artificial Intelligence"
+  year: "2019"
+
+orseauL21:
+  type: inproceedings
+  author: "Laurent Orseau and Levi H. S. Lelis"
+  title: "Policy-Guided Heuristic Search with Guarantees"
+  booktitle: "AAAI Conference on Artificial Intelligence"
+  year: "2021"
+
+orseauHL23:
+  type: inproceedings
+  author: "Laurent Orseau, Marcus Hutter, and Levi H. S. Lelis"
+  title: "Levin Tree Search with Context Models"
+  booktitle: "International Joint Conference on Artificial Intelligence"
+  year: "2023"
+
+macfarlaneBHL26:
+  type: inproceedings
+  author: "Matthew Macfarlane, Clément Bonnet, Herke van Hoof, and Levi H. S. Lelis"
+  title: "Gradient-Based Program Synthesis with Neurally Interpreted Languages"
+  booktitle: "International Conference on Learning Representations"
+  year: "2026"
+
+leaps2021:
+  type: inproceedings
+  author: "Dweep Trivedi, Jesse Zhang, Shao-Hua Sun, and Joseph J. Lim"
+  title: "Learning to synthesize programs as interpretable and generalizable policies"
+  booktitle: "Conference on Neural Information Processing Systems"
+  year: "2021"
+
+carvalhoTL24:
+  type: inproceedings
+  author: "Tales Carvalho, Kenneth Tjhia, and Levi H. S. Lelis"
+  title: "Reclaiming the Source of Programmatic Policies: Programmatic versus Latent Spaces"
+  booktitle: "International Conference on Learning Representations"
+  year: "2024"

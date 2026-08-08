@@ -1,5 +1,7 @@
 CLAUDE.local.md
 .DS_Store
 *.log
-blog/public/
+notebook/public/
+notebook/.hugo_build.lock
+notebook/resources/_gen/
 _site/

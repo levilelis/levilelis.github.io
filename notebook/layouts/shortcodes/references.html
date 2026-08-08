@@ -1,0 +1,21 @@
+{{- /* Auto-generated References section: {{< references >}} at end of a post. */ -}}
+{{- $cited := .Page.Store.Get "citations" -}}
+{{- with $cited -}}
+<h2 id="references">References</h2>
+<ol class="references">
+{{- range $key := . }}
+  {{- $e := index $.Site.Data.bibliography $key }}
+  {{- if $e }}
+  <li id="ref-{{ $key }}">
+  {{- if eq $e.type "inproceedings" -}}
+    {{ $e.author }}. {{ $e.title }}. In <em>{{ $e.booktitle }}</em>, {{ $e.year }}.
+  {{- else -}}
+    {{ $e.author }}. {{ $e.title }}. <em>{{ $e.journal }}</em>{{ with $e.volume }}, {{ . }}{{ end }}{{ with $e.pages }}:{{ replace . "--" "–" }}{{ end }}, {{ $e.year }}.
+  {{- end -}}
+  </li>
+  {{- else }}
+  <li id="ref-{{ $key }}"><strong>[missing bibliography entry: {{ $key }}]</strong></li>
+  {{- end }}
+{{- end }}
+</ol>
+{{- end -}}

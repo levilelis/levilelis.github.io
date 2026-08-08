@@ -1,0 +1,9 @@
+{{- /* Newspaper-style pull quote.
+       Usage:
+         {{< pullquote >}}The highlighted sentence.{{< /pullquote >}}
+         {{< pullquote align="right" >}}Floated to the right.{{< /pullquote >}}
+       align: "center" (default), "left", or "right". */ -}}
+{{- $align := .Get "align" | default "center" -}}
+<aside class="pullquote pullquote-{{ $align }}">
+  {{- .Inner | markdownify -}}
+</aside>
