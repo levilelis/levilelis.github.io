@@ -1,7 +1,7 @@
 ---
 title: "Learning at Two Timescales"
 subtitle: ""
-date: 2026-07-20
+date: 2026-08-07
 draft: false
 tags: [Machine Learning, Artificial Intelligence]
 description: "A brief description of my research interests as of 2026."
